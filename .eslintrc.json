@@ -1,10 +1,26 @@
 {
   "root": true,
+  "plugins": [
+    "html",
+    "@html-eslint",
+    "json",
+    "sonarjs",
+    "markdown",
+    "array-func",
+    "comments",
+    "no-constructor-bind",
+    "no-use-extend-native",
+    "optimize-regex",
+    "promise",
+    "import"
+  ],
   "env": {
-    "es2021": true,
-    "shared-node-browser": true
+    "node": true,
+    "mocha": true,
+    "es2021": true
   },
   "parserOptions": {
+    "ecmaVersion": 12,
     "sourceType": "module",
     "ecmaFeatures": {
       "impliedStrict": true,
@@ -16,6 +32,52 @@
   "ignorePatterns": [
     "src/**/*.test.ts"
   ],
+  "globals": {},
+  "extends": [
+    "adjunct"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.html"
+      ],
+      "parser": "@html-eslint/parser",
+      "extends": [
+        "plugin:@html-eslint/recommended"
+      ]
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "processor": "markdown/markdown"
+    }
+  ],
+  "settings": {
+    "html/html-extensions": [
+      ".html",
+      ".handlebars"
+    ],
+    "html/indent": "+4",
+    "html/report-bad-indent": "error",
+    "html/javascript-tag-names": [
+      "script"
+    ],
+    "import/extensions": [
+      ".js",
+      ".mjs"
+    ],
+    "import/external-module-folders": [
+      "node_modules",
+      ".yarn"
+    ],
+    "import/cache": {
+      "lifetime": 30
+    },
+    "import/docstyle": [
+      "jsdoc"
+    ]
+  },
   "rules": {
     "array-callback-return": [
       "error",
@@ -88,9 +150,9 @@
         "skipTemplates": true
       }
     ],
-    "no-loss-of-precission": "error",
+    "no-loss-of-precision": "error",
     "no-misleading-character-class": "error",
-    "no-new-native-constructor": "error",
+    "no-new-native-nonconstructor": "error",
     "no-new-symbol": "error",
     "no-obj-calls": "error",
     "no-promise-executor-return": "error",
@@ -134,9 +196,12 @@
       "error",
       {
         "vars": "all",
+        "varsIgnorePattern": "[iI]gnore",
         "args": "all",
+        "argsIgnorePattern": "[iI]gnore",
+        "ignoreRestSiblings": false,
         "caughtErrors": "all",
-        "caughtErrorsIgnorePattern": "^ignore"
+        "caughtErrorsIgnorePattern": "[iI]gnore"
       }
     ],
     "no-use-before-define": [
@@ -462,7 +527,11 @@
     "no-param-reassign": [
       "error",
       {
-        "props": true
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "res",
+          "response"
+        ]
       }
     ],
     "no-plusplus": [
@@ -505,7 +574,7 @@
         "allowAfterThisConstructor": true,
         "enforceInMethodNames": true,
         "enforceInClassFields": true,
-        "allowFunctionParams": false
+        "allowFunctionParams": true
       }
     ],
     "no-unneeded-ternary": [
@@ -612,7 +681,7 @@
       "always"
     ],
     "require-await": "error",
-    "require-unicode-regex": "error",
+    "require-unicode-regexp": "error",
     "require-yield": "error",
     "sort-imports": [
       "warn",
@@ -722,7 +791,7 @@
     ],
     "dot-location": [
       "error",
-      "object"
+      "property"
     ],
     "eol-last": [
       "error",
@@ -734,13 +803,11 @@
     ],
     "function-call-argument-newline": [
       "error",
-      "always"
+      "consistent"
     ],
     "function-paren-newline": [
       "error",
-      {
-        "minItems": 2
-      }
+      "multiline"
     ],
     "generator-star-spacing": [
       "error",
@@ -891,7 +958,11 @@
     ],
     "object-curly-newline": [
       "error",
-      "always"
+      {
+        "multiline": true,
+        "minProperties": 2,
+        "consistent": false
+      }
     ],
     "object-curly-spacing": [
       "error",
@@ -986,6 +1057,225 @@
         "before": false,
         "after": true
       }
-    ]
+    ],
+    "@html-eslint/require-doctype": "error",
+    "@html-eslint/no-duplicate-id": "error",
+    "@html-eslint/no-inline-styles": "error",
+    "@html-eslint/require-li-container": "error",
+    "@html-eslint/no-obsolete-tags": "error",
+    "@html-eslint/require-closing-tags": [
+      "error",
+      {
+        "selfClosing": "never",
+        "allowSelfClosingCustom": false
+      }
+    ],
+    "@html-eslint/require-meta-charset": "error",
+    "@html-eslint/no-target-blank": "error",
+    "@html-eslint/no-duplicate-attrs": "error",
+    "@html-eslint/require-button-type": "error",
+    "@html-eslint/require-lang": "error",
+    "@html-eslint/require-title": "error",
+    "@html-eslint/no-multiple-h1": "error",
+    "@html-eslint/require-meta-descriptor": "error",
+    "@html-eslint/require-img-alt": "error",
+    "@html-eslint/no-skip-heading-levels": "error",
+    "@html-eslint/require-frame-title": "error",
+    "@html-eslint/no-non-scalable-viewport": "error",
+    "@html-eslint/no-positive-tabindex": "error",
+    "@html-eslint/require-meta-viewport": "error",
+    "@html-eslint/no-abstract-roles": "error",
+    "@html-eslint/no-aria-hidden-body": "error",
+    "@html-eslint/no-accesskey-attrs": "error",
+    "@html-eslint/no-extra-spacing-attrs": [
+      "error",
+      {
+        "enforceBeforeSelfClose": false
+      }
+    ],
+    "@html-eslint/element-newline": "error",
+    "@html-eslint/indent": [
+      "error",
+      4
+    ],
+    "@html-eslint/quotes": [
+      "error",
+      "double"
+    ],
+    "@html-eslint/id-naming-convention": [
+      "error",
+      "snake_case"
+    ],
+    "@html-eslint/no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2
+      }
+    ],
+    "@html-eslint/no-trailing-spaces": "error",
+    "json/undefined": "error",
+    "json/enum-value-mismatch": "error",
+    "json/unexpected-end-of-comment": "error",
+    "json/unexpected-end-of-string": "error",
+    "json/unexpected-end-of-number": "error",
+    "json/invalid-unicode": "error",
+    "json/invalid-escape-character": "error",
+    "json/invalid-character": "error",
+    "json/property-expected": "error",
+    "json/comma-expected": "error",
+    "json/colon-expected": "error",
+    "json/value-expected": "error",
+    "json/comma-or-close-backet-expected": "error",
+    "json/comma-or-close-brace-expected": "error",
+    "json/trailing-comma": "error",
+    "json/duplicate-key": "error",
+    "json/comment-not-permitted": "error",
+    "json/schema-resolve-error": "error",
+    "sonarjs/no-all-duplicated-branches": "error",
+    "sonarjs/no-element-overwrite": "error",
+    "sonarjs/no-empty-collection": "error",
+    "sonarjs/no-extra-arguments": "error",
+    "sonarjs/no-identical-conditions": "error",
+    "sonarjs/no-identical-expressions": "error",
+    "sonarjs/no-ignored-return": "error",
+    "sonarjs/no-one-iteration-loop": "error",
+    "sonarjs/no-use-of-empty-return-value": "error",
+    "sonarjs/non-existent-operator": "error",
+    "sonarjs/cognitive-complexity": [
+      "error",
+      15
+    ],
+    "sonarjs/elseif-without-else": "error",
+    "sonarjs/max-switch-cases": [
+      "error",
+      10
+    ],
+    "sonarjs/no-collapsible-if": "error",
+    "sonarjs/no-collection-size-mischeck": "error",
+    "sonarjs/no-duplicate-string": [
+      "error",
+      3
+    ],
+    "sonarjs/no-duplicated-branches": "error",
+    "sonarjs/no-gratuitous-expressions": "error",
+    "sonarjs/no-identical-functions": [
+      "error",
+      2
+    ],
+    "sonarjs/no-inverted-boolean-check": "error",
+    "sonarjs/no-nested-switch": "error",
+    "sonarjs/no-nested-template-literals": "error",
+    "sonarjs/no-redundant-boolean": "error",
+    "sonarjs/no-redundant-jump": "error",
+    "sonarjs/no-same-line-conditional": "error",
+    "sonarjs/no-small-switch": "error",
+    "sonarjs/no-unused-collection": "error",
+    "sonarjs/no-useless-catch": "error",
+    "sonarjs/prefer-immediate-return": "error",
+    "sonarjs/prefer-object-literal": "error",
+    "sonarjs/prefer-single-boolean-return": "error",
+    "sonarjs/prefer-while": "error",
+    "array-func/array-from": "error",
+    "array-func/no-unnecessary-this-arg": "error",
+    "array-func/prefer-array-from": "error",
+    "array-func/avoid-reverse": "error",
+    "array-func/prefer-flat-map": "error",
+    "array-func/prefer-flat": "error",
+    "eslint-comments/disable-enable-pair": [
+      "error",
+      {
+        "allowWholeFile": true
+      }
+    ],
+    "eslint-comments/no-aggregating-enable": "error",
+    "eslint-comments/no-duplicate-disable": "error",
+    "eslint-comments/no-unlimited-disable": "error",
+    "eslint-comments/no-unused-disable": "error",
+    "eslint-comments/no-unused-enable": "error",
+    "no-constructor-bind/no-constructor-bind": "error",
+    "no-constructor-bind/no-constructor-state": "error",
+    "no-use-extend-native/no-use-extend-native": 1,
+    "optimize-regex/optimize-regex": "error",
+    "promise/always-return": [
+      "error",
+      {
+        "ignoreLastCallback": true
+      }
+    ],
+    "promise/avoid-new": "error",
+    "promise/catch-or-return": [
+      "error",
+      {
+        "allowThen": false,
+        "allowFinally": true
+      }
+    ],
+    "promise/no-callback-in-promise": "error",
+    "promise/no-multiple-resolved": "error",
+    "promise/no-native": "off",
+    "promise/no-nesting": "error",
+    "promise/no-new-statics": "error",
+    "promise/no-promise-in-callback": "error",
+    "promise/no-return-in-finally": "error",
+    "promise/no-return-wrap": [
+      "error",
+      {
+        "allowReject": false
+      }
+    ],
+    "promise/param-names": [
+      "error",
+      {
+        "resolvePattern": "^_?resolve$",
+        "rejectPattern": "^_?reject$"
+      }
+    ],
+    "promise/prefer-await-to-callbacks": "error",
+    "promise/prefer-await-to-then": "error",
+    "promise/valid-params": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/export": "error",
+    "import/no-deprecated": "error",
+    "import/no-empty-named-blocks": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/test/*.js"
+        ],
+        "optionalDependencies": false,
+        "peerDependencies": false,
+        "bundleDependencies": true,
+        "includeInternal": true,
+        "includeTypes": false,
+        "packageDir": "."
+      }
+    ],
+    "import/no-mutable-exports": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
+    "import/no-unused-modules": [
+      "error",
+      {
+        "missingExports": true,
+        "unusedExports": true,
+        "ignoreExports": [
+          "app.js"
+        ]
+      }
+    ],
+    "import/no-amd": "error",
+    "import/no-commonjs": [
+      "error",
+      {
+        "allowRequire": false,
+        "allowConditionalRequire": false,
+        "allowPrimitiveModules": false
+      }
+    ],
+    "import/no-import-module-exports": "error",
+    "import/no-nodejs-modules": "off",
+    "import/unambiguous": "error"
   }
 }
