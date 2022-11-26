@@ -1,5 +1,6 @@
-const express = require("express");
-const router = express.Router();
+import {Router} from "express";
+
+const router = Router();
 
 /* GET users listing. */
 router.get(
@@ -11,4 +12,6 @@ router.get(
     },
 );
 
-module.exports = router;
+export {
+    router,
+};
