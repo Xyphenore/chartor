@@ -1,0 +1,25 @@
+{
+  "verbose": false,
+  "quiet": false,
+  "ignore": [
+    "**/.*"
+  ],
+  "watch": [
+    "app.js",
+    "package.json",
+    "nodemon.json",
+    "bin",
+    "routes",
+    "views",
+    "public/stylesheets"
+  ],
+  "ext": "js,msj,cjs,json,njk,css",
+  "delay": 0,
+  "colours": true,
+  "exitcrash": false,
+  "legacyWatch": false,
+  "noUpdateNotifier": false,
+  "runOnChangeOnly": false,
+  "spawn": false,
+  "stdin": true
+}
