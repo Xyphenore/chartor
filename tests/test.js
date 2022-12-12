@@ -1,5 +1,5 @@
-import * as request from "supertest";
-import {app} from "../app";
+import request from "supertest";
+import {app} from "../app.js";
 
 describe("App", () => {
     it("has the default page", (done) => {

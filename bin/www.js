@@ -3,12 +3,11 @@
 /**
  * Module dependencies.
  */
+import debug_module from "debug";
+import http from "http";
+import {app} from "../app.js";
 
-import * as debug_module from "debug";
-import * as http from "http";
-import * as app from "../app";
-
-const debug = debug_module("demo:server");
+const debug = debug_module("chartor");
 
 /**
  * Get port from environment and store in Express.
