@@ -30,7 +30,9 @@
     "allowReserved": false
   },
   "ignorePatterns": [
-    "src/**/*.test.ts"
+    "**/*_test.js",
+    "**/*test.js",
+    "**/*test_*.js"
   ],
   "globals": {},
   "extends": [
