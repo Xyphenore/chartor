@@ -1,19 +1,36 @@
-import * as express from "express";
-import * as createError from "http-errors";
-import * as logger from "morgan";
-import {join} from "path";
-
-import {router as indexRouter} from "./routes/index";
-import {router as userRouter} from "./routes/users";
+import express from "express";
+import createError from "http-errors";
+import logger from "morgan";
+import nunjucks from "nunjucks";
+import {dirname, join} from "path";
+import {fileURLToPath} from "url";
+// import {STATUS_CODE} from "http";
+import {router as indexRouter} from "./routes/index.js";
+import {router as userRouter} from "./routes/users.js";
 
 const app = express();
 
 const NOT_FOUND_ERROR = 404;
 const INTERNAL_ERROR = 500;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.use(logger("dev"));
+
 // View engine setup
-app.set("views", join(__dirname, "views"));
-app.set("view engine", "handlebars");
+nunjucks.configure(join(__dirname, "views"), {
+    autoescape: true,
+    throwOnUndefined: true,
+    trimBlocks: true,
+    lstripBlocks: true,
+    noCache: true,
+    web: {
+        useCache: false,
+        async: false,
+    },
+    express: app,
+});
 
 app.use(logger("dev"));
 app.use(express.json());
