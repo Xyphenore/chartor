@@ -5,9 +5,29 @@
  */
 import debug_module from "debug";
 import http from "http";
+import gracefulShutdown from "http-graceful-shutdown";
 import {app} from "../app.js";
 
 const debug = debug_module("chartor");
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+const normalizePort = function(val) {
+    const localPort = parseInt(val, 10);
+
+    if (isNaN(localPort)) {
+        // named pipe
+        return val;
+    }
+
+    if (0 <= localPort) {
+        // port number
+        return localPort;
+    }
+
+    return false;
+};
 
 /**
  * Get port from environment and store in Express.
@@ -21,40 +41,14 @@ app.set("port", port);
 const server = http.createServer(app);
 
 /**
- * Listen on provided port, on all network interfaces.
- */
-server.listen(port);
-server.on("error", onError);
-server.on("listening", onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-function normalizePort(val) {
-    let port = parseInt(val, 10);
-
-    if (isNaN(port)) {
-        // named pipe
-        return val;
-    }
-
-    if (0 <= port) {
-        // port number
-        return port;
-    }
-
-    return false;
-}
-
-/**
  * Event listener for HTTP server "error" event.
  */
-function onError(error) {
+const onError = function(error) {
     if ("listen" !== error.syscall) {
         throw error;
     }
 
-    let bind = "string" === typeof port
+    const bind = "string" === typeof port
         ? "Pipe " + port
         : "Port " + port;
 
@@ -71,15 +65,30 @@ function onError(error) {
     default:
         throw error;
     }
-}
+};
 
 /**
  * Event listener for HTTP server "listening" event.
  */
-function onListening() {
-    let addr = server.address();
-    let bind = "string" === typeof addr
+const onListening = function() {
+    const addr = server.address();
+    const bind = "string" === typeof addr
         ? "pipe " + addr
         : "port " + addr.port;
     debug("Listening on " + bind);
-}
+};
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+
+// TODO Use production
+gracefulShutdown(server, {
+    timeout: 30000,
+    signals: "SIGINT SIGTERM",
+    development: true,
+    forceExit: true,
+});
