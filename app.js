@@ -22,13 +22,11 @@ import {router as indexRouter} from "./routes/index.js";
 
 const app = express();
 
-const NOT_FOUND_ERROR = 404;
 const INTERNAL_ERROR = 500;
 
+// Define constantes node js server for esmodule
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-app.use(logger("dev"));
 
 // View engine setup
 const VIEWS_DIR = join(__dirname, "views");
@@ -45,7 +43,46 @@ nunjucks.configure(VIEWS_DIR, {
     express: app,
 });
 
-app.use(logger("dev"));
+// Security setup
+app.use(helmet());
+
+// TODO Tester la vitesse de l'application
+// TODO Mettre en place différents compresseur en fonction des routes
+// https://www.npmjs.com/package/compression
+app.use(compression({
+    chunkSize: zlib.Z_DEFAULT_CHUNK_SIZE,
+    level: zlib.Z_DEFAULT_COMPRESSION,
+    memLevel: zlib.Z_DEFAULT_MEMLEVEL,
+    strategy: zlib.Z_DEFAULT_STRATEGY,
+    threshold: "1kb",
+    windowBits: zlib.Z_DEFAULT_WINDOWBITS,
+}));
+
+// Create logs directory
+const LOGS_DIR = join(__dirname, "logs");
+if (!exists(LOGS_DIR)) {
+    mkdir(LOGS_DIR);
+}
+
+// TODO Remove dev logger
+app.use(logger("dev", {immediate: false}));
+
+// Logger for access
+const LOG_STREAM = rfs.createStream(
+    join("access.log"),
+    {
+        interval: "1d",
+        path: LOGS_DIR,
+    },
+);
+app.use(logger(
+    "combined",
+    {
+        immediate: false,
+        stream: LOG_STREAM,
+    },
+));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
