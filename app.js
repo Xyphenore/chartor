@@ -31,7 +31,8 @@ const __dirname = dirname(__filename);
 app.use(logger("dev"));
 
 // View engine setup
-nunjucks.configure(join(__dirname, "views"), {
+const VIEWS_DIR = join(__dirname, "views");
+nunjucks.configure(VIEWS_DIR, {
     autoescape: true,
     throwOnUndefined: true,
     trimBlocks: true,
