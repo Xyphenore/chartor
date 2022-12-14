@@ -53,8 +53,8 @@ app.use("/", indexRouter);
 app.use("/users", userRouter);
 
 // Catch 404 and forward to error handler
-app.use((_firstIgnored, _secondIgnored, next) => {
-    next(createError(NOT_FOUND_ERROR));
+app.use((req, _secondIgnored, next) => {
+    next(createError.NotFound("Unknown resource at URL: " + req.url));
 });
 
 // Error handler
