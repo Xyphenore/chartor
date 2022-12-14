@@ -1,12 +1,24 @@
+// For optimization
+import compression from "compression";
 import express from "express";
+import {existsSync as exists, mkdirSync as mkdir} from "fs";
+
+// For security
+import helmet from "helmet";
+
+// For logs
 import createError from "http-errors";
 import logger from "morgan";
+
+// For views
 import nunjucks from "nunjucks";
+
 import {dirname, join} from "path";
+import rfs from "rotating-file-stream";
 import {fileURLToPath} from "url";
-// import {STATUS_CODE} from "http";
+import zlib from "zlib";
+
 import {router as indexRouter} from "./routes/index.js";
-import {router as userRouter} from "./routes/users.js";
 
 const app = express();
 
