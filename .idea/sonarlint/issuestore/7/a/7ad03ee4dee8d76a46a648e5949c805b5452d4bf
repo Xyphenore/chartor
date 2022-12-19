@@ -1,0 +1,494 @@
+
+pjavascript:S104"]This file has 1995 lines, which is greater than 1000 authorized. Split it into smaller files.
+:javascript:S3723"Missing trailing comma.(¾æÔ8Ü˜ƒßÒ0
+Bjavascript:S121" Expected { after 'if' condition.(†¾¶Ë8Ü˜ƒßÒ0
+Gjavascript:S121 " Expected { after 'if' condition.(üŠ­œûÿÿÿÿ8İ˜ƒßÒ0
+javascript:S3798/"^Define this declaration in a local scope or bind explicitly the property to the global object.(ÜÛ·ˆ8İ˜ƒßÒ0
+Gjavascript:S1211" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8İ˜ƒßÒ0
+fjavascript:S11213"CExtract the assignment of "portablePathMatch" from this expression.(ÈôŸ‰8İ˜ƒßÒ0
+Bjavascript:S1214" Expected { after 'if' condition.(ó°Æí8İ˜ƒßÒ0
+ijavascript:S11215"FExtract the assignment of "uncPortablePathMatch" from this expression.(ˆ¨Ëà8İ˜ƒßÒ0
+Bjavascript:S1216" Expected { after 'if' condition.(èŞ¬¬8İ˜ƒßÒ0
+9javascript:S17746"Ternary operator used.(èŞ¬¬8Ş˜ƒßÒ0
+Zjavascript:S46246"7Refactor this code to not use nested template literals.(èŞ¬¬8Ş˜ƒßÒ0
+Zjavascript:S46246"7Refactor this code to not use nested template literals.(èŞ¬¬8Ş˜ƒßÒ0
+5javascript:S1096"No magic number: 2.(èŞ¬¬8Ş˜ƒßÒ0
+?javascript:S1218"Expected { after 'else'.(ÜÅô—øÿÿÿÿ8Ş˜ƒßÒ0
+€javascript:S3798;"^Define this declaration in a local scope or bind explicitly the property to the global object.(îÛ†c8Ş˜ƒßÒ0
+Gjavascript:S121=" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8Ş˜ƒßÒ0
+ejavascript:S1121@"BExtract the assignment of "windowsPathMatch" from this expression.(µòÊÜ8ß˜ƒßÒ0
+Bjavascript:S121A" Expected { after 'if' condition.(é¶ï8ß˜ƒßÒ0
+Ejavascript:S126B"Add the missing "else" clause.(ôí¥Áıÿÿÿÿ8ß˜ƒßÒ0
+mjavascript:S1121B"EExtract the assignment of "uncWindowsPathMatch" from this expression.(ôí¥Áıÿÿÿÿ8ß˜ƒßÒ0
+Gjavascript:S121C" Expected { after 'if' condition.(†¤·µÿÿÿÿÿ8ß˜ƒßÒ0
+>javascript:S1774C"Ternary operator used.(†¤·µÿÿÿÿÿ8ß˜ƒßÒ0
+_javascript:S4624C"7Refactor this code to not use nested template literals.(†¤·µÿÿÿÿÿ8à˜ƒßÒ0
+_javascript:S4624C"7Refactor this code to not use nested template literals.(†¤·µÿÿÿÿÿ8à˜ƒßÒ0
+:javascript:S109C"No magic number: 2.(†¤·µÿÿÿÿÿ8à˜ƒßÒ0
+javascript:S3798F"^Define this declaration in a local scope or bind explicitly the property to the global object.(ŸÖ“Ï8à˜ƒßÒ0
+>javascript:S1774G"Ternary operator used.(ÔÚ®ıùÿÿÿÿ8à˜ƒßÒ0
+<javascript:S109J"No magic number: 1e3.(à¾ÆÑúÿÿÿÿ8à˜ƒßÒ0
+†javascript:S3798K"^Define this declaration in a local scope or bind explicitly the property to the global object.(€àÒÄúÿÿÿÿ8á˜ƒßÒ0
+9javascript:S1774P"Ternary operator used.(ÿÏşŞ8á˜ƒßÒ0
+>javascript:S1774R"Ternary operator used.(óˆ©‰øÿÿÿÿ8á˜ƒßÒ0
+<javascript:S121U"Expected { after 'for-of'.(·¢µ·8á˜ƒßÒ0
+†javascript:S3798Z"^Define this declaration in a local scope or bind explicitly the property to the global object.(¦Ğ‡ğÿÿÿÿÿ8á˜ƒßÒ0
+sjavascript:S107Z"LAsync function 'copyImpl' has too many parameters (8). Maximum allowed is 7.(¦Ğ‡ğÿÿÿÿÿ8á˜ƒßÒ0
+ljavascript:S1541Z"DFunction has a complexity of 15 which is greater than 10 authorized.(¦Ğ‡ğÿÿÿÿÿ8â˜ƒßÒ0
+Qjavascript:S3504[")Unexpected var, use let or const instead.(İ˜áÿÿÿÿÿ8â˜ƒßÒ0
+9javascript:S1774\"Ternary operator used.(Æ²÷¹8â˜ƒßÒ0
+9javascript:S1774^"Ternary operator used.(ö¸ÅÒ8ã˜ƒßÒ0
+Xjavascript:S103u"6This line has a length of 258. Maximum allowed is 180.(Á•—‡8ã˜ƒßÒ0
+}javascript:S1067u"ZReduce the number of conditional operators (6) used in the expression (maximum allowed 3).(Á•—‡8ä˜ƒßÒ0
+9javascript:S1774u"Ternary operator used.(Á•—‡8ä˜ƒßÒ0
+9javascript:S1774u"Ternary operator used.(Á•—‡8ä˜ƒßÒ0
+gjavascript:S3358u"DExtract this nested ternary operation into an independent statement.(Á•—‡8ä˜ƒßÒ0
+9javascript:S1774u"Ternary operator used.(Á•—‡8ä˜ƒßÒ0
+9javascript:S1774u"Ternary operator used.(Á•—‡8å˜ƒßÒ0
+gjavascript:S3358u"DExtract this nested ternary operation into an independent statement.(Á•—‡8å˜ƒßÒ0
+6javascript:S109y"No magic number: 511.(¥ŸÅc8å˜ƒßÒ0
+6javascript:S109y"No magic number: 511.(¥ŸÅc8å˜ƒßÒ0
+<javascript:S109z"No magic number: 511.(êÿ¿¦ùÿÿÿÿ8å˜ƒßÒ0
+javascript:S3798"^Define this declaration in a local scope or bind explicitly the property to the global object.(´…ïİ8æ˜ƒßÒ0
+‡javascript:S3798†"^Define this declaration in a local scope or bind explicitly the property to the global object.(¦Ë·ãıÿÿÿÿ8æ˜ƒßÒ0
+wjavascript:S107†"OAsync function 'copyFolder' has too many parameters (10). Maximum allowed is 7.(¦Ë·ãıÿÿÿÿ8æ˜ƒßÒ0
+}javascript:S3776†"TRefactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.(¦Ë·ãıÿÿÿÿ8æ˜ƒßÒ0
+mjavascript:S1541†"DFunction has a complexity of 11 which is greater than 10 authorized.(¦Ë·ãıÿÿÿÿ8ç˜ƒßÒ0
+:javascript:S1774"Ternary operator used.(‘É8ç˜ƒßÒ0
+^javascript:S103 "6This line has a length of 187. Maximum allowed is 180.(îê§Öùÿÿÿÿ8ç˜ƒßÒ0
+^javascript:S103¦"6This line has a length of 181. Maximum allowed is 180.(ëØöñûÿÿÿÿ8ç˜ƒßÒ0
+‚javascript:S3798¯"^Define this declaration in a local scope or bind explicitly the property to the global object.(¨Ó¾ë8è˜ƒßÒ0
+=javascript:S109³"No magic number: 146.(ª¹å·ÿÿÿÿÿ8è˜ƒßÒ0
+‚javascript:S3798¸"^Define this declaration in a local scope or bind explicitly the property to the global object.(­÷ş8è˜ƒßÒ0
+‚javascript:S3798Ğ"^Define this declaration in a local scope or bind explicitly the property to the global object.(âé£Î8è˜ƒßÒ0
+pjavascript:S107Ğ"MAsync function 'copyFile' has too many parameters (10). Maximum allowed is 7.(âé£Î8è˜ƒßÒ0
+javascript:S1172Ğ"kRemove the unused function parameter "postlayout" or rename it to "_postlayout" to make intention explicit.(âé£Î8é˜ƒßÒ0
+javascript:S1172Ğ"kRemove the unused function parameter "updateTime" or rename it to "_updateTime" to make intention explicit.(âé£Î8é˜ƒßÒ0
+Rjavascript:S3504Ñ")Unexpected var, use let or const instead.(Ø‡èÔşÿÿÿÿ8é˜ƒßÒ0
+:javascript:S1774Ú"Ternary operator used.(ÉšÏª8é˜ƒßÒ0
+Yjavascript:S103Û"6This line has a length of 451. Maximum allowed is 180.(«ÿù†8ê˜ƒßÒ0
+:javascript:S1774Û"Ternary operator used.(«ÿù†8ê˜ƒßÒ0
+:javascript:S1774Û"Ternary operator used.(«ÿù†8ê˜ƒßÒ0
+hjavascript:S3358Û"DExtract this nested ternary operation into an independent statement.(«ÿù†8ê˜ƒßÒ0
+:javascript:S1774Û"Ternary operator used.(«ÿù†8ê˜ƒßÒ0
+hjavascript:S3358Û"DExtract this nested ternary operation into an independent statement.(«ÿù†8ë˜ƒßÒ0
+‡javascript:S3798ß"^Define this declaration in a local scope or bind explicitly the property to the global object.(«×ƒåûÿÿÿÿ8ë˜ƒßÒ0
+xjavascript:S107ß"PAsync function 'copySymlink' has too many parameters (10). Maximum allowed is 7.(«×ƒåûÿÿÿÿ8ë˜ƒßÒ0
+”javascript:S1172ß"kRemove the unused function parameter "postlayout" or rename it to "_postlayout" to make intention explicit.(«×ƒåûÿÿÿÿ8ë˜ƒßÒ0
+”javascript:S1172ß"kRemove the unused function parameter "updateTime" or rename it to "_updateTime" to make intention explicit.(«×ƒåûÿÿÿÿ8ë˜ƒßÒ0
+”javascript:S1172ß"kRemove the unused function parameter "sourceStat" or rename it to "_sourceStat" to make intention explicit.(«×ƒåûÿÿÿÿ8ì˜ƒßÒ0
+‚javascript:S3798î"^Define this declaration in a local scope or bind explicitly the property to the global object.(ÇÉ™³8ì˜ƒßÒ0
+‚javascript:S3798ñ"^Define this declaration in a local scope or bind explicitly the property to the global object.(¤“ì¡8ì˜ƒßÒ0
+xjavascript:S100ñ"URename this 'ENOSYS' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(¤“ì¡8ì˜ƒßÒ0
+vjavascript:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(òƒ¸õüÿÿÿÿ8ì˜ƒßÒ0
+xjavascript:S3776Œ"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÛúÙ‡8í˜ƒßÒ0
+6javascript:S109Œ"No magic number: 5.(ÛúÙ‡8í˜ƒßÒ0
+qjavascript:S134£"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¥Èîã8í˜ƒßÒ0
+Fjavascript:S126¥"Add the missing "else" clause.(Óìñ¯ùÿÿÿÿ8î˜ƒßÒ0
+pjavascript:S1117¦"G'resolve' is already declared in the upper scope on line 2035 column 7.(ÕªÍÚüÿÿÿÿ8î˜ƒßÒ0
+=javascript:S109¦"No magic number: 100.(ÕªÍÚüÿÿÿÿ8î˜ƒßÒ0
+Hjavascript:S121»" Expected { after 'if' condition.(Üçæşøÿÿÿÿ8î˜ƒßÒ0
+=javascript:S121¼"Expected { after 'for-of'.(‚îËâ8î˜ƒßÒ0
+xjavascript:S3776Â"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.(Šø®ı8î˜ƒßÒ0
+Hjavascript:S121Å" Expected { after 'if' condition.(°àĞµÿÿÿÿÿ8ï˜ƒßÒ0
+vjavascript:S134Î"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(©ËÔ°øÿÿÿÿ8ï˜ƒßÒ0
+Hjavascript:S909Ï"%Unexpected use of continue statement.(ÉŠ©ƒ8ï˜ƒßÒ0
+ijavascript:S905Ô"FExpected an assignment or function call and instead saw an expression.(Ëòº£8ï˜ƒßÒ0
+:javascript:S1774Ô"Ternary operator used.(Ëòº£8ï˜ƒßÒ0
+fjavascript:S1121Ô"BExtract the assignment of "createdDirectory" from this expression.(Ëòº£8ï˜ƒßÒ0
+Cjavascript:S121Ö" Expected { after 'if' condition.(§»Ëø8ğ˜ƒßÒ0
+xjavascript:S3776á"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.(Á¹Ë¾8ğ˜ƒßÒ0
+Hjavascript:S121ä" Expected { after 'if' condition.(°àĞµÿÿÿÿÿ8ğ˜ƒßÒ0
+vjavascript:S134í"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(©ËÔ°øÿÿÿÿ8ğ˜ƒßÒ0
+Hjavascript:S909î"%Unexpected use of continue statement.(ÉŠ©ƒ8ğ˜ƒßÒ0
+ijavascript:S905ó"FExpected an assignment or function call and instead saw an expression.(Ëòº£8ñ˜ƒßÒ0
+:javascript:S1774ó"Ternary operator used.(Ëòº£8ñ˜ƒßÒ0
+fjavascript:S1121ó"BExtract the assignment of "createdDirectory" from this expression.(Ëòº£8ñ˜ƒßÒ0
+Cjavascript:S121õ" Expected { after 'if' condition.(²µ•ú8ñ˜ƒßÒ0
+}javascript:S3776ƒ"TRefactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.( ©âıÿÿÿÿ8ñ˜ƒßÒ0
+mjavascript:S1541ƒ"DFunction has a complexity of 11 which is greater than 10 authorized.( ©âıÿÿÿÿ8ò˜ƒßÒ0
+Cjavascript:S121" Expected { after 'if' condition.(öÛ‰ÿ8ò˜ƒßÒ0
+Cjavascript:S121–" Expected { after 'if' condition.(öÛ‰ÿ8ò˜ƒßÒ0
+6javascript:S109›"No magic number: 8.(êÅú´8ò˜ƒßÒ0
+6javascript:S109›"No magic number: 6.(êÅú´8ò˜ƒßÒ0
+[javascript:S4624›"7Refactor this code to not use nested template literals.(êÅú´8ò˜ƒßÒ0
+8javascript:S109"No magic number: 511.(ê¹Ï8ò˜ƒßÒ0
+Cjavascript:S121®" Expected { after 'if' condition.(ûÁİ…8ó˜ƒßÒ0
+:javascript:S1774·"Ternary operator used.(á«¢×8ó˜ƒßÒ0
+Cjavascript:S121¹" Expected { after 'if' condition.(ûÁİ…8ó˜ƒßÒ0
+Cjavascript:S121Ê" Expected { after 'if' condition.(ûÁİ…8ó˜ƒßÒ0
+:javascript:S1774Ó"Ternary operator used.(á«¢×8ó˜ƒßÒ0
+Cjavascript:S121Õ" Expected { after 'if' condition.(ûÁİ…8ó˜ƒßÒ0
+xjavascript:S3776ğ"TRefactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÖÊÕÁ8ó˜ƒßÒ0
+7javascript:S109ò"No magic number: 1e3.(÷³Ô-8ô˜ƒßÒ0
+6javascript:S109ò"No magic number: 60.(÷³Ô-8ô˜ƒßÒ0
+8javascript:S109ú"No magic number: 500.(ìÖ“€8ô˜ƒßÒ0
+vjavascript:S134ˆ"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¬ƒÆÿÿÿÿÿ8ô˜ƒßÒ0
+Hjavascript:S909‹"%Unexpected use of continue statement.(ÉŠ©ƒ8ô˜ƒßÒ0
+qjavascript:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(†¬‡ú8ô˜ƒßÒ0
+7javascript:S109"No magic number: 60.(†¬‡ú8õ˜ƒßÒ0
+8javascript:S109"No magic number: 1e3.(†¬‡ú8õ˜ƒßÒ0
+pjavascript:S1117"G'resolve' is already declared in the upper scope on line 2035 column 7.(¥ƒ®àÿÿÿÿÿ8õ˜ƒßÒ0
+6javascript:S109·"No magic number: 2.(Å–ê“8õ˜ƒßÒ0
+;javascript:S109»"No magic number: 2.(•¬±üÿÿÿÿ8õ˜ƒßÒ0
+Cjavascript:S121Â" Expected { after 'if' condition.(É®²Ù8õ˜ƒßÒ0
+Ajavascript:S126Å"Add the missing "else" clause.(ö”½¿8ö˜ƒßÒ0
+Cjavascript:S121Í" Expected { after 'if' condition.(É®²Ù8ö˜ƒßÒ0
+Ajavascript:S126Ğ"Add the missing "else" clause.(ö”½¿8ö˜ƒßÒ0
+‡javascript:S3798Ú"^Define this declaration in a local scope or bind explicitly the property to the global object.(’–¸öüÿÿÿÿ8ö˜ƒßÒ0
+Hjavascript:S121İ" Expected { after 'if' condition.(´•Óûıÿÿÿÿ8ö˜ƒßÒ0
+:javascript:S1774á"Ternary operator used.(¿û×à8ö˜ƒßÒ0
+‚javascript:S3798å"^Define this declaration in a local scope or bind explicitly the property to the global object.(Á¦±Ÿ8ö˜ƒßÒ0
+kjavascript:S1117ü"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8÷˜ƒßÒ0
+kjavascript:S1117„"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8÷˜ƒßÒ0
+:javascript:S1774"Ternary operator used.(¦Ÿ†8÷˜ƒßÒ0
+kjavascript:S1117“"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8÷˜ƒßÒ0
+kjavascript:S1117¡"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8÷˜ƒßÒ0
+kjavascript:S1117±"G'resolve' is already declared in the upper scope on line 2035 column 7.(âĞâÓ8÷˜ƒßÒ0
+:javascript:S1774¹"Ternary operator used.(­‰”¥8÷˜ƒßÒ0
+:javascript:S1774½"Ternary operator used.(­‰”¥8ø˜ƒßÒ0
+kjavascript:S1117Á"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ø˜ƒßÒ0
+jjavascript:S1117Ã"A'path' is already declared in the upper scope on line 3 column 8.(§ÿ…Öûÿÿÿÿ8ø˜ƒßÒ0
+kjavascript:S1117Ë"G'resolve' is already declared in the upper scope on line 2035 column 7.(¨Ì ô8ø˜ƒßÒ0
+kjavascript:S1117Ó"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ø˜ƒßÒ0
+kjavascript:S1117Û"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ø˜ƒßÒ0
+kjavascript:S1117ë"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ø˜ƒßÒ0
+kjavascript:S1117û"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117‹"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117“"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117›"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117£"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117«"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117³"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+kjavascript:S1117»"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ù˜ƒßÒ0
+:javascript:S1774¼"Ternary operator used.(«ÚĞÇ8ú˜ƒßÒ0
+:javascript:S1774Å"Ternary operator used.(«ÚĞÇ8ú˜ƒßÒ0
+kjavascript:S1117Í"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ú˜ƒßÒ0
+:javascript:S1774Î"Ternary operator used.(«ÚĞÇ8ú˜ƒßÒ0
+:javascript:S1774×"Ternary operator used.(«ÚĞÇ8ú˜ƒßÒ0
+kjavascript:S1117ß"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ú˜ƒßÒ0
+kjavascript:S1117ç"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+Bjavascript:S121ñ" Expected { after 'if' condition.(”×ò`8û˜ƒßÒ0
+kjavascript:S1117ò"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+Bjavascript:S121ù" Expected { after 'if' condition.(”×ò`8û˜ƒßÒ0
+kjavascript:S1117ı"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+kjavascript:S1117…"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+kjavascript:S1117‘"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+kjavascript:S1117™"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8û˜ƒßÒ0
+kjavascript:S1117¡"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ü˜ƒßÒ0
+:javascript:S1774¢"Ternary operator used.(«ÚĞÇ8ü˜ƒßÒ0
+:javascript:S1774§"Ternary operator used.(«ÚĞÇ8ü˜ƒßÒ0
+kjavascript:S1117«"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ü˜ƒßÒ0
+:javascript:S1774¬"Ternary operator used.(‘µÓ8ü˜ƒßÒ0
+:javascript:S1774´"Ternary operator used.(‘µÓ8ü˜ƒßÒ0
+kjavascript:S1117»"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ü˜ƒßÒ0
+jjavascript:S1117½"A'path' is already declared in the upper scope on line 3 column 8.(§ÿ…Öûÿÿÿÿ8ı˜ƒßÒ0
+kjavascript:S1117Å"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ı˜ƒßÒ0
+kjavascript:S1117Í"G'resolve' is already declared in the upper scope on line 2035 column 7.(¸„§8ı˜ƒßÒ0
+;javascript:S3723Ø"Missing trailing comma.(ÌÎıå8ı˜ƒßÒ0
+;javascript:S3723ß"Missing trailing comma.(ÌÎıå8ı˜ƒßÒ0
+pjavascript:S1117å"G'resolve' is already declared in the upper scope on line 2035 column 7.(™†â½üÿÿÿÿ8ı˜ƒßÒ0
+jjavascript:S1117ô"A'path' is already declared in the upper scope on line 3 column 8.(áÎµ„ıÿÿÿÿ8ı˜ƒßÒ0
+:javascript:S1774¡"Ternary operator used.(×ä¿8ı˜ƒßÒ0
+:javascript:S1774¤"Ternary operator used.(¨€ø‚8ş˜ƒßÒ0
+Hjavascript:S121›	" Expected { after 'if' condition.(´è½­ÿÿÿÿÿ8ş˜ƒßÒ0
+Hjavascript:S121£	" Expected { after 'if' condition.(°™ÚÆùÿÿÿÿ8ş˜ƒßÒ0
+„javascript:S3923©	"[Remove this conditional structure or edit its code blocks so that they're not all the same.(¾òÜùÿÿÿÿ8ş˜ƒßÒ0
+„javascript:S3923°	"[Remove this conditional structure or edit its code blocks so that they're not all the same.(¾òÜùÿÿÿÿ8ş˜ƒßÒ0
+;javascript:S3723Ò	"Missing trailing comma.(ÌÎıå8ÿ˜ƒßÒ0
+;javascript:S3723Ù	"Missing trailing comma.(ÌÎıå8ÿ˜ƒßÒ0
+_javascript:S6353è	";Use concise character class syntax '\d' instead of '[0-9]'.(ßÁÅû8ÿ˜ƒßÒ0
+xjavascript:S5843é	"TSimplify this regular expression to reduce its complexity from 24 to the 20 allowed.(’—ã8ÿ˜ƒßÒ0
+Cjavascript:S121ò	" Expected { after 'if' condition.(ˆôñó8ÿ˜ƒßÒ0
+Hjavascript:S121ô	" Expected { after 'if' condition.(¬ùéæüÿÿÿÿ8€™ƒßÒ0
+Kjavascript:S121ù	"#Expected { after 'while' condition.(ÜìÕüÿÿÿÿ8€™ƒßÒ0
+javascript:S1488û	"gImmediately return this expression instead of assigning it to the temporary variable "fullVirtualPath".(ÙôÃÿÿÿÿÿ8€™ƒßÒ0
+6javascript:S109€
+"No magic number: 3.(İ»ù”8€™ƒßÒ0
+6javascript:S109€
+"No magic number: 5.(İ»ù”8€™ƒßÒ0
+Hjavascript:S121
+" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8€™ƒßÒ0
+6javascript:S109ƒ
+"No magic number: 3.(Çì‡ì8™ƒßÒ0
+6javascript:S109ƒ
+"No magic number: 4.(Çì‡ì8™ƒßÒ0
+Cjavascript:S121„
+" Expected { after 'if' condition.(ÓíµÀ8™ƒßÒ0
+;javascript:S109…
+"No magic number: 4.(ÀŠ¿îøÿÿÿÿ8™ƒßÒ0
+Hjavascript:S121‡
+" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8™ƒßÒ0
+;javascript:S109ˆ
+"No magic number: 4.(»ò–õúÿÿÿÿ8™ƒßÒ0
+5javascript:S109Š
+"No magic number: 5.(Îæ¸v8‚™ƒßÒ0
+Cjavascript:S121–
+" Expected { after 'if' condition.(˜à‡Õ8‚™ƒßÒ0
+;javascript:S109—
+"No magic number: 5.(ìçíßûÿÿÿÿ8‚™ƒßÒ0
+Hjavascript:S121˜
+" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8‚™ƒßÒ0
+;javascript:S109š
+"No magic number: 3.(¹é†Úüÿÿÿÿ8‚™ƒßÒ0
+Hjavascript:S121Ÿ
+" Expected { after 'if' condition.(ì÷ƒıÿÿÿÿ8‚™ƒßÒ0
+;javascript:S109 
+"No magic number: 5.(ìçíßûÿÿÿÿ8ƒ™ƒßÒ0
+Hjavascript:S121¡
+" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8ƒ™ƒßÒ0
+;javascript:S109£
+"No magic number: 3.(¹é†Úüÿÿÿÿ8ƒ™ƒßÒ0
+Hjavascript:S121§
+" Expected { after 'if' condition.(ÜÅô—øÿÿÿÿ8ƒ™ƒßÒ0
+Hjavascript:S121©
+" Expected { after 'if' condition.(ÚÌÁûÿÿÿÿ8ƒ™ƒßÒ0
+‡javascript:S3798µ
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(äú®ğıÿÿÿÿ8ƒ™ƒßÒ0
+Bjavascript:S121¼
+" Expected { after 'if' condition.(¸®Ã'8ƒ™ƒßÒ0
+:javascript:S3723Á
+"Missing trailing comma.(ÚĞ÷88ƒ™ƒßÒ0
+‡javascript:S3798Ç
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(…ÁŞıùÿÿÿÿ8„™ƒßÒ0
+Cjavascript:S121Ê
+" Expected { after 'if' condition.(¥¹ï8„™ƒßÒ0
+<javascript:S109Ï
+"No magic number: 16.(î•çÚıÿÿÿÿ8„™ƒßÒ0
+<javascript:S109Ï
+"No magic number: 16.(î•çÚıÿÿÿÿ8„™ƒßÒ0
+<javascript:S109Ï
+"No magic number: 12.(î•çÚıÿÿÿÿ8„™ƒßÒ0
+ƒjavascript:S1067Ğ
+"ZReduce the number of conditional operators (4) used in the expression (maximum allowed 3).(èß–âúÿÿÿÿ8…™ƒßÒ0
+<javascript:S109Ğ
+"No magic number: 17.(èß–âúÿÿÿÿ8…™ƒßÒ0
+<javascript:S109Ğ
+"No magic number: 17.(èß–âúÿÿÿÿ8…™ƒßÒ0
+;javascript:S109Ğ
+"No magic number: 5.(èß–âúÿÿÿÿ8…™ƒßÒ0
+<javascript:S109Ğ
+"No magic number: 16.(èß–âúÿÿÿÿ8†™ƒßÒ0
+<javascript:S109Ğ
+"No magic number: 15.(èß–âúÿÿÿÿ8†™ƒßÒ0
+~javascript:S1067Ñ
+"ZReduce the number of conditional operators (4) used in the expression (maximum allowed 3).(ò«¬ı8†™ƒßÒ0
+7javascript:S109Ñ
+"No magic number: 17.(ò«¬ı8‡™ƒßÒ0
+7javascript:S109Ñ
+"No magic number: 17.(ò«¬ı8‡™ƒßÒ0
+7javascript:S109Ñ
+"No magic number: 16.(ò«¬ı8‡™ƒßÒ0
+7javascript:S109Ñ
+"No magic number: 14.(ò«¬ı8‡™ƒßÒ0
+‡javascript:S3798Ó
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(½°ÍÆıÿÿÿÿ8‡™ƒßÒ0
+„javascript:S100Ó
+"\Rename this 'tryReadFile$1' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(½°ÍÆıÿÿÿÿ8‡™ƒßÒ0
+Cjavascript:S121Ø
+" Expected { after 'if' condition.(¥¹ï8ˆ™ƒßÒ0
+‡javascript:S3798Ü
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(èœäòÿÿÿÿÿ8ˆ™ƒßÒ0
+‡javascript:S3798ä
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(˜å§ûÿÿÿÿ8ˆ™ƒßÒ0
+‚javascript:S3798ç
+"^Define this declaration in a local scope or bind explicitly the property to the global object.(¹‰œı8ˆ™ƒßÒ0
+hjavascript:S1541ç
+"DFunction has a complexity of 13 which is greater than 10 authorized.(¹‰œı8ˆ™ƒßÒ0
+Rjavascript:S3504è
+")Unexpected var, use let or const instead.(İ˜áÿÿÿÿÿ8‰™ƒßÒ0
+@javascript:S3723ó
+"Missing trailing comma.(«Æ«¢üÿÿÿÿ8‰™ƒßÒ0
+Cjavascript:S121ø
+" Expected { after 'if' condition.(Á¶‘„8‰™ƒßÒ0
+;javascript:S3723ú
+"Missing trailing comma.(°É‘„8‰™ƒßÒ0
+Hjavascript:S121€" Expected { after 'if' condition.(Œ·˜Ùüÿÿÿÿ8‰™ƒßÒ0
+:javascript:S1774"Ternary operator used.(´¼„´8‰™ƒßÒ0
+Cjavascript:S121…" Expected { after 'if' condition.(¥¹ï8Š™ƒßÒ0
+Hjavascript:S121ˆ" Expected { after 'if' condition.(Œ·˜Ùüÿÿÿÿ8Š™ƒßÒ0
+Cjavascript:S121Š" Expected { after 'if' condition.(¥¹ï8Š™ƒßÒ0
+:javascript:S1774‹"Ternary operator used.(³ºéó8Š™ƒßÒ0
+‚javascript:S3798"^Define this declaration in a local scope or bind explicitly the property to the global object.(‹ë¬8Š™ƒßÒ0
+}javascript:S100"ZRename this 'getFormat$1' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(‹ë¬8Š™ƒßÒ0
+?javascript:S1774’"Ternary operator used.(õŠ¨¾şÿÿÿÿ8‹™ƒßÒ0
+Cjavascript:S121“" Expected { after 'if' condition.(¢¾äİ8‹™ƒßÒ0
+@javascript:S3723—"Missing trailing comma.(€£Šîûÿÿÿÿ8‹™ƒßÒ0
+‡javascript:S3798"^Define this declaration in a local scope or bind explicitly the property to the global object.(ëòà×şÿÿÿÿ8‹™ƒßÒ0
+‚javascript:S100"ZRename this 'getSource$1' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(ëòà×şÿÿÿÿ8‹™ƒßÒ0
+?javascript:S1774Ÿ"Ternary operator used.(õŠ¨¾şÿÿÿÿ8‹™ƒßÒ0
+Hjavascript:S121 " Expected { after 'if' condition.(Ïƒ»Ğøÿÿÿÿ8‹™ƒßÒ0
+@javascript:S3723¢"Missing trailing comma.(Ïı“üÿÿÿÿ8‹™ƒßÒ0
+‡javascript:S3798¦"^Define this declaration in a local scope or bind explicitly the property to the global object.(²õ³Õÿÿÿÿÿ8Œ™ƒßÒ0
+}javascript:S100¦"URename this 'load$1' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(²õ³Õÿÿÿÿÿ8Œ™ƒßÒ0
+Rjavascript:S3504§")Unexpected var, use let or const instead.(Ø‡èÔşÿÿÿÿ8Œ™ƒßÒ0
+?javascript:S1774©"Ternary operator used.(õŠ¨¾şÿÿÿÿ8Œ™ƒßÒ0
+Cjavascript:S121ª" Expected { after 'if' condition.(‹ôÙş8Œ™ƒßÒ0
+Cjavascript:S121®" Expected { after 'if' condition.(‹ôÙş8Œ™ƒßÒ0
+?javascript:S1774¯"Ternary operator used.(ºº·‰ûÿÿÿÿ8Œ™ƒßÒ0
+@javascript:S3723¸"Missing trailing comma.(‚Ü»´úÿÿÿÿ8™ƒßÒ0
+@javascript:S3723¹"Missing trailing comma.(±Š»…ıÿÿÿÿ8™ƒßÒ0
+;javascript:S3723º"Missing trailing comma.(ï¿¬è8™ƒßÒ0
+;javascript:S3723À"Missing trailing comma.(Ò¡¾‡8™ƒßÒ0
+”javascript:S100Ç"lRename this 'ObjectPrototypeHasOwnProperty' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(¦‘ÇÁûÿÿÿÿ8™ƒßÒ0
+Šjavascript:S100È"bRename this 'RegExpPrototypeExec' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(öØ†‹ıÿÿÿÿ8™ƒßÒ0
+javascript:S100É"kRename this 'RegExpPrototypeSymbolReplace' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(®™‰ä8™ƒßÒ0
+‰javascript:S100Ê"fRename this 'StringPrototypeEndsWith' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(Á…·Ú8™ƒßÒ0
+‰javascript:S100Ë"fRename this 'StringPrototypeIncludes' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(¤Ñ«É8™ƒßÒ0
+Œjavascript:S100Ì"iRename this 'StringPrototypeLastIndexOf' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(¦‚İş8™ƒßÒ0
+javascript:S100Í"eRename this 'StringPrototypeIndexOf' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(¿ÁÑ¬úÿÿÿÿ8™ƒßÒ0
+ˆjavascript:S100Î"eRename this 'StringPrototypeReplace' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(æ€…ç8™ƒßÒ0
+‹javascript:S100Ï"cRename this 'StringPrototypeSlice' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(· Ûıÿÿÿÿ8™ƒßÒ0
+javascript:S100Ğ"hRename this 'StringPrototypeStartsWith' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(©üÂÿÿÿÿÿ8™ƒßÒ0
+‚javascript:S3798Ô"^Define this declaration in a local scope or bind explicitly the property to the global object.(†Î†8™ƒßÒ0
+?javascript:S1774à"Ternary operator used.(’õÌ„ıÿÿÿÿ8™ƒßÒ0
+`javascript:S4624à"7Refactor this code to not use nested template literals.(’õÌ„ıÿÿÿÿ8™ƒßÒ0
+`javascript:S4624à"7Refactor this code to not use nested template literals.(’õÌ„ıÿÿÿÿ8™ƒßÒ0
+@javascript:S3723â"Missing trailing comma.(Ñ˜”¦ÿÿÿÿÿ8™ƒßÒ0
+:javascript:S1774ç"Ternary operator used.(ŸòÁ8™ƒßÒ0
+[javascript:S4624ç"7Refactor this code to not use nested template literals.(ŸòÁ8™ƒßÒ0
+[javascript:S4624ç"7Refactor this code to not use nested template literals.(ŸòÁ8™ƒßÒ0
+@javascript:S3723é"Missing trailing comma.(Ñ˜”¦ÿÿÿÿÿ8™ƒßÒ0
+^javascript:S103ñ"6This line has a length of 213. Maximum allowed is 180.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+?javascript:S1774ñ"Ternary operator used.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ñ"7Refactor this code to not use nested template literals.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ñ"7Refactor this code to not use nested template literals.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+?javascript:S1774ñ"Ternary operator used.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ñ"7Refactor this code to not use nested template literals.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ñ"7Refactor this code to not use nested template literals.(ÉÃº‹üÿÿÿÿ8™ƒßÒ0
+?javascript:S1774ó"Ternary operator used.(¦µ‹ïùÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ó"7Refactor this code to not use nested template literals.(¦µ‹ïùÿÿÿÿ8™ƒßÒ0
+`javascript:S4624ó"7Refactor this code to not use nested template literals.(¦µ‹ïùÿÿÿÿ8‘™ƒßÒ0
+@javascript:S3723ô"Missing trailing comma.(•ÁÒ”ûÿÿÿÿ8‘™ƒßÒ0
+:javascript:S1774õ"Ternary operator used.(ÏËÕ8‘™ƒßÒ0
+[javascript:S4624õ"7Refactor this code to not use nested template literals.(ÏËÕ8‘™ƒßÒ0
+[javascript:S4624õ"7Refactor this code to not use nested template literals.(ÏËÕ8‘™ƒßÒ0
+:javascript:S1774õ"Ternary operator used.(ÏËÕ8‘™ƒßÒ0
+[javascript:S4624õ"7Refactor this code to not use nested template literals.(ÏËÕ8‘™ƒßÒ0
+[javascript:S4624õ"7Refactor this code to not use nested template literals.(ÏËÕ8‘™ƒßÒ0
+;javascript:S3723÷"Missing trailing comma.(‘ôÑ‡8’™ƒßÒ0
+jjavascript:S1117û"A'path' is already declared in the upper scope on line 3 column 8.(å¹ºÌùÿÿÿÿ8’™ƒßÒ0
+:javascript:S1774ü"Ternary operator used.(Ñ­ˆú8’™ƒßÒ0
+[javascript:S4624ü"7Refactor this code to not use nested template literals.(Ñ­ˆú8’™ƒßÒ0
+[javascript:S4624ü"7Refactor this code to not use nested template literals.(Ñ­ˆú8’™ƒßÒ0
+:javascript:S1774ü"Ternary operator used.(Ñ­ˆú8’™ƒßÒ0
+[javascript:S4624ü"7Refactor this code to not use nested template literals.(Ñ­ˆú8’™ƒßÒ0
+[javascript:S4624ü"7Refactor this code to not use nested template literals.(Ñ­ˆú8’™ƒßÒ0
+;javascript:S3723ş"Missing trailing comma.(‘ôÑ‡8“™ƒßÒ0
+‡javascript:S3798"^Define this declaration in a local scope or bind explicitly the property to the global object.(È¼Âøÿÿÿÿ8“™ƒßÒ0
+pjavascript:S4138ƒ"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ĞèÛ8”™ƒßÒ0
+‡javascript:S3798"^Define this declaration in a local scope or bind explicitly the property to the global object.(²Ô‰øÿÿÿÿ8”™ƒßÒ0
+mjavascript:S1541"DFunction has a complexity of 12 which is greater than 10 authorized.(²Ô‰øÿÿÿÿ8”™ƒßÒ0
+jjavascript:S1117"A'path' is already declared in the upper scope on line 3 column 8.(²Ô‰øÿÿÿÿ8”™ƒßÒ0
+@javascript:S3723›"Missing trailing comma.(¶Ö×ğøÿÿÿÿ8•™ƒßÒ0
+:javascript:S1774¦"Ternary operator used.(ææÿë8•™ƒßÒ0
+;javascript:S3723§"Missing trailing comma.(Ì…úì8•™ƒßÒ0
+;javascript:S3723®"Missing trailing comma.(Ğ³¬8•™ƒßÒ0
+:javascript:S1774°"Ternary operator used.(›ƒàµ8•™ƒßÒ0
+;javascript:S3723Ä"Missing trailing comma.(ØÈê¤8•™ƒßÒ0
+‡javascript:S3798É"^Define this declaration in a local scope or bind explicitly the property to the global object.(íâ×éüÿÿÿÿ8–™ƒßÒ0
+…javascript:S135Ë"]Reduce the total number of "break" and "continue" statements in this loop to use one at most.(˜ïˆÿÿÿÿÿ8–™ƒßÒ0
+;javascript:S3723Ô"Missing trailing comma.(†³Úı8–™ƒßÒ0
+@javascript:S3723ç"Missing trailing comma.(¶Ö×ğøÿÿÿÿ8–™ƒßÒ0
+‚javascript:S3798ƒ"^Define this declaration in a local scope or bind explicitly the property to the global object.(†¾¹Í8–™ƒßÒ0
+;javascript:S3723‡"Missing trailing comma.(Ü™Şµ8–™ƒßÒ0
+‡javascript:S3798Š"^Define this declaration in a local scope or bind explicitly the property to the global object.(ôÅÌƒùÿÿÿÿ8—™ƒßÒ0
+?javascript:S1774‹"Ternary operator used.(®ÍÇôúÿÿÿÿ8—™ƒßÒ0
+@javascript:S3723"Missing trailing comma.(»„›šùÿÿÿÿ8—™ƒßÒ0
+‡javascript:S3798’"^Define this declaration in a local scope or bind explicitly the property to the global object.(ä¸¤Ùşÿÿÿÿ8—™ƒßÒ0
+@javascript:S3723"Missing trailing comma.(»„›šùÿÿÿÿ8—™ƒßÒ0
+^javascript:S103 "6This line has a length of 198. Maximum allowed is 180.(€Á°²üÿÿÿÿ8—™ƒßÒ0
+}javascript:S5843 "TSimplify this regular expression to reduce its complexity from 47 to the 20 allowed.(€Á°²üÿÿÿÿ8˜™ƒßÒ0
+‚javascript:S3798¢"^Define this declaration in a local scope or bind explicitly the property to the global object.(ùäô­8˜™ƒßÒ0
+{javascript:S107¢"XFunction 'resolvePackageTargetString' has too many parameters (8). Maximum allowed is 7.(ùäô­8˜™ƒßÒ0
+xjavascript:S3776¢"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(ùäô­8™™ƒßÒ0
+hjavascript:S1541¢"DFunction has a complexity of 16 which is greater than 10 authorized.(ùäô­8™™ƒßÒ0
+javascript:S1172¢"kRemove the unused function parameter "conditions" or rename it to "_conditions" to make intention explicit.(ùäô­8™™ƒßÒ0
+Hjavascript:S121¤" Expected { after 'if' condition.(ÃÓËöûÿÿÿÿ8™™ƒßÒ0
+javascript:S1488®"dImmediately return this expression instead of assigning it to the temporary variable "exportTarget".(¢ó’ìúÿÿÿÿ8š™ƒßÒ0
+?javascript:S1774®"Ternary operator used.(¢ó’ìúÿÿÿÿ8š™ƒßÒ0
+;javascript:S109¶"No magic number: 2.(­ú¾¬ûÿÿÿÿ8š™ƒßÒ0
+@javascript:S3723¶"Missing trailing comma.(­ú¾¬ûÿÿÿÿ8š™ƒßÒ0
+Hjavascript:S121¸" Expected { after 'if' condition.(ÃÓËöûÿÿÿÿ8š™ƒßÒ0
+Hjavascript:S121½" Expected { after 'if' condition.(ÃÓËöûÿÿÿÿ8š™ƒßÒ0
+Hjavascript:S121¿" Expected { after 'if' condition.(•®Œùÿÿÿÿ8š™ƒßÒ0
+?javascript:S1774Á"Ternary operator used.(¿Š£öûÿÿÿÿ8›™ƒßÒ0
+@javascript:S3723Æ"Missing trailing comma.(Ë»éáüÿÿÿÿ8›™ƒßÒ0
+‚javascript:S3798Ë"^Define this declaration in a local scope or bind explicitly the property to the global object.(¶£ñ§8›™ƒßÒ0
+Bjavascript:S121Î" Expected { after 'if' condition.(¸®Ã'8›™ƒßÒ0
+?javascript:S109Ï"No magic number: 4294967295.(´Òãè8›™ƒßÒ0
+‡javascript:S3798Ñ"^Define this declaration in a local scope or bind explicitly the property to the global object.(«¢¢åùÿÿÿÿ8œ™ƒßÒ0
+zjavascript:S107Ñ"RFunction 'resolvePackageTarget' has too many parameters (8). Maximum allowed is 7.(«¢¢åùÿÿÿÿ8œ™ƒßÒ0
+}javascript:S3776Ñ"TRefactor this function to reduce its Cognitive Complexity from 40 to the 15 allowed.(«¢¢åùÿÿÿÿ8œ™ƒßÒ0
+]javascript:S3801Ñ"4Refactor this function to use "return" consistently.(«¢¢åùÿÿÿÿ8™ƒßÒ0
+mjavascript:S1541Ñ"DFunction has a complexity of 19 which is greater than 10 authorized.(«¢¢åùÿÿÿÿ8™ƒßÒ0
+€javascript:S135à"]Reduce the total number of "break" and "continue" statements in this loop to use one at most.(Î¸»Ä8™ƒßÒ0
+pjavascript:S4138à"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(Î¸»Ä8™ƒßÒ0
+;javascript:S3723ì"Missing trailing comma.(ß·8™ƒßÒ0
+qjavascript:S134ğ"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(”ùü8™ƒßÒ0
+Hjavascript:S909ñ"%Unexpected use of continue statement.(ÉŠ©ƒ8™ƒßÒ0
+Hjavascript:S909ö"%Unexpected use of continue statement.(ÉŠ©ƒ8™ƒßÒ0
+Hjavascript:S909ú"%Unexpected use of continue statement.(ÉŠ©ƒ8™ƒßÒ0
+Hjavascript:S121ÿ" Expected { after 'if' condition.(ªÚãœşÿÿÿÿ8™ƒßÒ0
+pjavascript:S4138ƒ"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ĞèÛ8™ƒßÒ0
+@javascript:S3723‰"Missing trailing comma.(ÖÖÉœüÿÿÿÿ8™ƒßÒ0
+pjavascript:S4138"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ĞèÛ8Ÿ™ƒßÒ0
+;javascript:S3723™"Missing trailing comma.(ß·8Ÿ™ƒßÒ0
+vjavascript:S134›"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(›•ûúÿÿÿÿ8Ÿ™ƒßÒ0
+Cjavascript:S121œ" Expected { after 'if' condition.(ÉŠ©ƒ8Ÿ™ƒßÒ0
+Hjavascript:S909œ"%Unexpected use of continue statement.(ÉŠ©ƒ8Ÿ™ƒßÒ0
+Ajavascript:S126¡"Add the missing "else" clause.(¹©éõ8 ™ƒßÒ0
+;javascript:S3723©"Missing trailing comma.(È†Õù8 ™ƒßÒ0
+‚javascript:S3798¬"^Define this declaration in a local scope or bind explicitly the property to the global object.(¶Îßô8 ™ƒßÒ0
+:javascript:S1774¯"Ternary operator used.(ãåšñ8 ™ƒßÒ0
+?javascript:S1774°"Ternary operator used.(”ÅİĞûÿÿÿÿ8 ™ƒßÒ0
+Hjavascript:S121²" Expected { after 'if' condition.(Ú’ÚÂıÿÿÿÿ8 ™ƒßÒ0
+Cjavascript:S121´" Expected { after 'if' condition.(È¸å8¡™ƒßÒ0
+Cjavascript:S121¶" Expected { after 'if' condition.(È¸å8¡™ƒßÒ0
+Hjavascript:S121¸" Expected { after 'if' condition.(Ú’ÚÂıÿÿÿÿ8¡™ƒßÒ0
+Hjavascript:S121º" Expected { after 'if' condition.(Ú’ÚÂıÿÿÿÿ8¡™ƒßÒ0
+Cjavascript:S121¼" Expected { after 'if' condition.(È¸å8¡™ƒßÒ0
+‚javascript:S3798¿"^Define this declaration in a local scope or bind explicitly the property to the global object.(˜¡ìĞ8¡™ƒßÒ0
+xjavascript:S3776¿"TRefactor this function to reduce its Cognitive Complexity from 40 to the 15 allowed.(˜¡ìĞ8¢™ƒßÒ0
+Xjavascript:S3801¿"4Refactor this function to use "return" consistently.(˜¡ìĞ8¢™ƒßÒ0
+hjavascript:S1541¿"DFunction has a complexity of 18 which is greater than 10 authorized.(˜¡ìĞ8¢™ƒßÒ0
+;javascript:S3723Ã"Missing trailing comma.(†³Úı8¢™ƒßÒ0
+;javascript:S3723Ø"Missing trailing comma.(ß·8¢™ƒßÒ0
+vjavascript:S134Ú"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ø—‰¬şÿÿÿÿ8£™ƒßÒ0
+qjavascript:S134á"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ĞèÛ8£™ƒßÒ0
+pjavascript:S4138á"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ĞèÛ8£™ƒßÒ0
+@javascript:S3723æ"Missing trailing comma.(’Ÿşêşÿÿÿÿ8£™ƒßÒ0
+^javascript:S103é"6This line has a length of 193. Maximum allowed is 180.(ö¢Ñùÿÿÿÿ8£™ƒßÒ0
+;javascript:S3723î"Missing trailing comma.(²¢¸¹8£™ƒßÒ0
+vjavascript:S134ó"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¾á¥ƒÿÿÿÿÿ8¤™ƒßÒ0
+;javascript:S3723ı"Missing trailing comma.(ß·8¤™ƒßÒ0
+}javascript:S5843‰"TSimplify this regular expression to reduce its complexity from 23 to the 20 allowed.(§½Æûÿÿÿÿ8¤™ƒßÒ0
+‚javascript:S3798‹"^Define this declaration in a local scope or bind explicitly the property to the global object.(ò·Æâ8¤™ƒßÒ0
+Hjavascript:S121" Expected { after 'if' condition.(°àĞµÿÿÿÿÿ8¤™ƒßÒ0
+‡javascript:S3798”"^Define this declaration in a local scope or bind explicitly the property to the global object.(Æº•şÿÿÿÿ8¤™ƒßÒ0
+@javascript:S3723™"Missing trailing comma.(œí•™üÿÿÿÿ8¤™ƒßÒ0
+Hjavascript:S121Ÿ" Expected { after 'if' condition.(ÓæÍâúÿÿÿÿ8¤™ƒßÒ0
+‚javascript:S3798£"^Define this declaration in a local scope or bind explicitly the property to the global object.(†ÏÍ8¥™ƒßÒ0
+xjavascript:S3776£"TRefactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.(†ÏÍ8¥™ƒßÒ0
+{javascript:S100£"XRename this 'resolve$1' function to match the regular expression '^[_a-z][a-zA-Z0-9]*$'.(†ÏÍ8¥™ƒßÒ0
+hjavascript:S1541£"DFunction has a complexity of 19 which is greater than 10 authorized.(†ÏÍ8¥™ƒßÒ0
+Rjavascript:S3504¤")Unexpected var, use let or const instead.(Ø‡èÔşÿÿÿÿ8¥™ƒßÒ0
+Cjavascript:S121§" Expected { after 'if' condition.(›¨ô…8¦™ƒßÒ0
+:javascript:S1774©"Ternary operator used.(¤æü8¦™ƒßÒ0
+Cjavascript:S121¬" Expected { after 'if' condition.(›¨ô…8¦™ƒßÒ0
+?javascript:S1774°"Ternary operator used.(Œ×ïÏûÿÿÿÿ8¦™ƒßÒ0
+?javascript:S1774±"Ternary operator used.(…æÕúıÿÿÿÿ8¦™ƒßÒ0
+?javascript:S1774±"Ternary operator used.(…æÕúıÿÿÿÿ8¦™ƒßÒ0
+mjavascript:S3358±"DExtract this nested ternary operation into an independent statement.(…æÕúıÿÿÿÿ8¦™ƒßÒ0
+Cjavascript:S121³" Expected { after 'if' condition.(›¨ô…8¦™ƒßÒ0
+Cjavascript:S121µ" Expected { after 'if' condition.(î¨ÂÉ8¦™ƒßÒ0
+vjavascript:S134¾"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(§¸½üÿÿÿÿ8§™ƒßÒ0
+?javascript:S1774Ç"Ternary operator used.(ÃÖ½ƒûÿÿÿÿ8§™ƒßÒ0
+@javascript:S3723Ç"Missing trailing comma.(ÃÖ½ƒûÿÿÿÿ8§™ƒßÒ0
+Hjavascript:S121Ê" Expected { after 'if' condition.(òî¿ºşÿÿÿÿ8§™ƒßÒ0
+Hjavascript:S121Ñ" Expected { after 'if' condition.(ÿòù¸ûÿÿÿÿ8§™ƒßÒ0
+;javascript:S3723Ô"Missing trailing comma.(Ò¡¾‡8¨™ƒßÒ0
+@javascript:S3723ë"Missing trailing comma.(º—Åùÿÿÿÿ8¨™ƒßÒ0
+?javascript:S1774ô"Ternary operator used.(«è§üúÿÿÿÿ8¨™ƒßÒ0
+?javascript:S1774õ"Ternary operator used.(åšŞùÿÿÿÿ8¨™ƒßÒ0
+:javascript:S1774ö"Ternary operator used.(şÄ‹8¨™ƒßÒ0
