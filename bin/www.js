@@ -12,36 +12,40 @@ const debug = debug_module("chartor");
 
 /**
  * Normalize a port into a number, string, or false.
+ *
+ * @param val A variable containing a port.
+ *
+ * @throws Error Thrown if the value cannot be converted to a valid port.
+ *
+ * @since 1.0.0
+ * @author Express (Base)
+ * @author Axel DAVID (Edit)
  */
 const normalizePort = function(val) {
     const localPort = parseInt(val, 10);
 
-    if (isNaN(localPort)) {
-        // named pipe
-        return val;
-    }
-
-    if (0 <= localPort) {
+    if (!isNaN(localPort) && 0 <= localPort) {
         // port number
         return localPort;
     }
 
-    return false;
+    throw new Error(
+        "Cannot normalize the port contains in the value."
+        + ` Value: '${val}'.`
+        + " Please give a valid value like an integer.",
+    );
 };
 
-/**
- * Get port from environment and store in Express.
- */
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
-/**
- * Create HTTP server.
- */
 const server = http.createServer(app);
 
 /**
  * Event listener for HTTP server "error" event.
+ *
+ * @author Express
+ * @since 1.0.0
  */
 const onError = function(error) {
     if ("listen" !== error.syscall) {
@@ -69,6 +73,9 @@ const onError = function(error) {
 
 /**
  * Event listener for HTTP server "listening" event.
+ *
+ * @author Express
+ * @since 1.0.0
  */
 const onListening = function() {
     const addr = server.address();
@@ -78,9 +85,6 @@ const onListening = function() {
     debug("Listening on " + bind);
 };
 
-/**
- * Listen on provided port, on all network interfaces.
- */
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
