@@ -41,7 +41,7 @@
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
     "@html-eslint/parser": "^0.15.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "eslint-config-adjunct": "^4.11.2",
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -62,12 +62,12 @@
     "eslint-plugin-sonarjs": "^0.17.0",
     "eslint-plugin-switch-case": "^1.1.2",
     "eslint-plugin-unicorn": "^45.0.2",
-    "flow-bin": "^0.196.0",
+    "flow-bin": "^0.196.3",
     "mocha": "^10.2.0",
     "nodemon": "^2.0.20",
-    "npm-check-updates": "^16.6.0",
-    "snyk": "^1.1071.0",
-    "stylelint": "^14.16.0",
+    "npm-check-updates": "^16.6.2",
+    "snyk": "^1.1080.0",
+    "stylelint": "^14.16.1",
     "supertest": "^6.3.3"
   }
 }
