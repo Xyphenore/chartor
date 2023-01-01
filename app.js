@@ -294,7 +294,7 @@ if (exists(NAMES_FILE)) {
 }
 listCSVFiles(DATA_DIR)
     .forEach(name => {
-    writeFile(NAMES_FILE, name, {flag: "a"});
-});
+        writeFile(NAMES_FILE, name, {flag: "a"});
+    });
 
 export {app};
