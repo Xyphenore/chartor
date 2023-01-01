@@ -20,6 +20,15 @@ import zlib from "zlib";
 
 import {router as indexRouter} from "./routes/index.js";
 
+/**
+ * The application.
+ *
+ * @constant
+ * @type {app}
+ *
+ * @version 1.0.0
+ * @since 1.0.0
+ */
 const app = express();
 
 const INTERNAL_ERROR = 500;
@@ -29,6 +38,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // View engine setup
+/**
+ * The path of view directory.
+ *
+ * @constant
+ * @type {string}
+ *
+ * @since 1.0.0
+ */
 const VIEWS_DIR = join(__dirname, "views");
 nunjucks.configure(VIEWS_DIR, {
     autoescape: true,
@@ -59,6 +76,14 @@ app.use(compression({
 }));
 
 // Create logs directory
+/**
+ * The path of logs directory.
+ *
+ * @constant
+ * @type {string}
+ *
+ * @since 1.0.0
+ */
 const LOGS_DIR = join(__dirname, "logs");
 if (!exists(LOGS_DIR)) {
     mkdir(LOGS_DIR);
@@ -87,6 +112,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // Add public directory
+/**
+ * The path of public directory.
+ *
+ * @constant
+ * @type {string}
+ *
+ * @since 1.0.0
+ */
 const PUBLIC_DIR = join(__dirname, "public");
 app.use(express.static(PUBLIC_DIR));
 

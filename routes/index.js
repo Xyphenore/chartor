@@ -10,15 +10,17 @@ const router = Router();
  * @since 1.0.0
  * @version 1.0.0
  * @author Axel DAVID
- * @see views.index.njk
+ * @see chartor.views.index.njk
  */
-router.get("/", (_ignoredReq, res, _ignoredNext) => {
+const indexRoute = function(_ignoredReq, res, _ignoredNext) {
     res.render(
         "index.njk",
         {
             title: "Express",
         },
     );
-});
+};
+
+router.get("/", indexRoute);
 
 export {router};

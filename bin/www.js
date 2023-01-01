@@ -13,15 +13,33 @@ const debug = debug_module("chartor");
 /**
  * Normalize a port into a number, string, or false.
  *
- * @param val A variable containing a port.
+ * @param {!string} val A variable containing a port.
  *
- * @throws Error Thrown if the value cannot be converted to a valid port.
+ * @throws {Error} Thrown if the value cannot be converted to a valid port.
+ * @throws {TypeError} Thrown if the value is null.
+ * @throws {TypeError} Thrown if the value is not a string.
+ *
+ * @returns {!number} port.
  *
  * @since 1.0.0
  * @author Express (Base)
  * @author Axel DAVID (Edit)
  */
 const normalizePort = function(val) {
+    if (null === val) {
+        throw new TypeError(
+            "The given value is null. Please give a value not null.",
+        );
+    }
+
+    if ("string" !== typeof val) {
+        throw new TypeError(
+            "The given value is not a string."
+            + ` Type: '${typeof val}'. Value: '${val}'.`
+            + " Please give a string.",
+        );
+    }
+
     const localPort = parseInt(val, 10);
 
     if (!isNaN(localPort) && 0 <= localPort) {
