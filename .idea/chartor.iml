@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.yarn/unplugged/flow-bin-npm-0.193.0-865e16be35/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/.yarn/unplugged/node-gyp-npm-9.3.0-21c41a4dfd/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/.yarn/unplugged/nodemon-npm-2.0.20-2fea8f7bf9/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/logs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
