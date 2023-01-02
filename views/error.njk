@@ -1,0 +1,8 @@
+{% extends "./common/page.njk" %}
+
+{% block content %}
+    <div class="container mb-auto mx-auto bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-medium py-5
+    w-full justify-between items-center">
+        <span class="pl-5 underline">Erreur {{ code }}:</span> {{ message }}
+    </div>
+{% endblock content %}
