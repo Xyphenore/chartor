@@ -88,7 +88,6 @@ const switchTheme = function(event) {
      */
     async() => {
         const themeButton = document.getElementById("toggle_switch_theme");
-
         if (null === themeButton) {
             throw new Error(
                 "Cannot get the theme's switch."
