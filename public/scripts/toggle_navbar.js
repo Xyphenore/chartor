@@ -90,6 +90,18 @@ const switchMenuState = function(event) {
     }
 };
 
+/**
+ * Reset the state of the main menu so 'close'.
+ *
+ * @author Axel DAVID
+ * @since 1.0.0
+ * @see updateMenu
+ * @see switchMenuState
+ */
+const resetMenuState = function() {
+    localStorage.mainMenuState = "close";
+};
+
 (
     /**
      * Autoload script for the burger menu.
@@ -123,6 +135,7 @@ const switchMenuState = function(event) {
         }
 
         menuButton.addEventListener('click', switchMenuState);
+        resetMenuState();
         updateMenu();
     }
 )();
