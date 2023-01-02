@@ -1,14 +1,8 @@
+import express from "express";
+
 // For optimization
 import compression from "compression";
-import express from "express";
-import {
-    existsSync as exists,
-    mkdirSync as mkdir,
-    lstatSync,
-    readdirSync,
-    writeFileSync as writeFile,
-    rmSync as rm,
-} from "fs";
+import zlib from "zlib";
 
 // For security
 import helmet from "helmet";
@@ -16,17 +10,21 @@ import helmet from "helmet";
 // For logs
 import createError from "http-errors";
 import logger from "morgan";
+import rfs from "rotating-file-stream";
 
 // For views
 import nunjucks from "nunjucks";
 
-import {dirname, join} from "path";
-import rfs from "rotating-file-stream";
-import {fileURLToPath} from "url";
-import zlib from "zlib";
-
+// Routers
 import {router as indexRouter} from "./routes/index.js";
 import {router as sourceRouter} from "./routes/source.js";
+import {router as csvRouter, loadCSVList} from "./routes/csv.js";
+
+// Utility
+import {dirname, join} from "path";
+import {existsSync as exists, mkdirSync as mkdir} from "fs";
+import {isDirectory} from "./libs/path.js";
+import {fileURLToPath} from "url";
 
 /**
  * The application.
@@ -40,38 +38,6 @@ import {router as sourceRouter} from "./routes/source.js";
 const app = express();
 
 const INTERNAL_ERROR = 500;
-
-/**
- * Check if the given path is a directory.
- *
- * @param {!string} path String not null.
- *
- * @throws {TypeError} Thrown if the given path is not a string.
- * @throws {TypeError} Thrown if the given path is null.
- *
- * @returns {!boolean} Returns True if the path is a directory, else False.
- *
- * @since 1.0.0
- * @author Axel DAVID
- */
-const isDirectory = function(path) {
-    if (null === path) {
-        throw new TypeError(
-            "The given path is null. Please give a path not null.",
-        );
-    }
-
-    if ("string" !== typeof path) {
-        throw new TypeError(
-            "The given path is not a string."
-            + ` Type: '${typeof path}'. Value: '${path}'.`
-            + " Please give a string.",
-        );
-    }
-
-    return lstatSync(path)
-        .isDirectory();
-};
 
 // Define constantes node js server for esmodule
 const __filename = fileURLToPath(import.meta.url);
@@ -195,6 +161,7 @@ app.use(express.static(PUBLIC_DIR));
 // Add routes
 app.use("/", indexRouter);
 app.use("/source", sourceRouter);
+app.use("/csv", csvRouter);
 
 // Catch 404 and forward to error handler
 app.use((req, _secondIgnored, next) => {
@@ -209,10 +176,15 @@ app.use((err, req, res, _ignored) => {
 
     // Render the error page
     res.status(err.status || INTERNAL_ERROR);
-    res.render("error");
+    res.render(
+        "error.njk",
+        {
+            title: "Chartor - Erreur",
+            code: err.status,
+            message: err.message
+        }
+    );
 });
-
-// List CSV files
 
 /**
  * The path of data directory.
@@ -234,69 +206,6 @@ if (!isDirectory(DATA_DIR)) {
     );
 }
 
-// List csv files in data
-/**
- * List all csv file from data directory.
- *
- * @param {!string} dataDir String not null.
- * The path of the data directory.
- *
- * @throws {TypeError} Thrown if the data directory is null.
- * @throws {TypeError} Thrown if the data directory is not a string.
- * @throws {Error} Thrown if the path does not exist.
- * @throws {Error} Thrown if the path is not a directory.
- *
- * @returns {!Set<string>} Returns the list of csv names.
- *
- * @since 1.0.0
- * @author Axel DAVID
- */
-const listCSVFiles = function(dataDir) {
-    if (null === dataDir) {
-        throw new TypeError(
-            "The given path is null. Please give a path not null.",
-        );
-    }
-    if ("string" !== typeof dataDir) {
-        throw new TypeError(
-            "The given path is not a string."
-            + ` Type: '${typeof dataDir}'. Value: '${dataDir}'.`
-            + " Please give a string.",
-        );
-    }
-
-    if (!exists(DATA_DIR)) {
-        throw new Error(`Internal Error. The data directory does not exist. Value: '${dataDir}'. Please create it.`);
-    }
-    if (!isDirectory(DATA_DIR)) {
-        throw new Error(
-            "Internal Error. The data directory is not a directory."
-            + `Value: '${dataDir}'.`
-            + "Please verify the object with the name of the data directory.",
-        );
-    }
-
-    return new Set(
-        readdirSync(dataDir)
-            .filter(file => file.endsWith(".csv")),
-    );
-};
-
-/**
- * The path of the file 'csv.txt'.
- *
- * @type {!string}
- * @constant
- * @since 1.0.0
- * @author Axel DAVID
- */
-const NAMES_FILE = join(PUBLIC_DIR, "csv.txt");
-if (exists(NAMES_FILE)) {
-    rm(NAMES_FILE);
-}
-listCSVFiles(DATA_DIR)
-    .forEach(name => {
-        writeFile(NAMES_FILE, name + "\n", {flag: "a"});
-    });
+loadCSVList(DATA_DIR);
 
 export {app};
