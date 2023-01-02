@@ -74,6 +74,18 @@ const switchTheme = function(event) {
 };
 
 (
+    /**
+     * Autoload function.
+     *
+     * @throws {Error} Thrown if any button has the ID 'toggle_switch_theme'.
+     *
+     * @returns {Promise<void>}
+     *
+     * @since 1.0.0
+     * @author Axel DAVID
+     * @see switchTheme
+     * @see updateTheme
+     */
     async() => {
         const themeButton = document.getElementById("toggle_switch_theme");
 
