@@ -1,6 +1,6 @@
 {
   "name": "chartor",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "LPro project to load data and do charts with them.",
   "private": true,
   "type": "module",
