@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Sullivan-Fill';
+    src: url('../fonts/Sullivan-Fill.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#nunjucks {
+    font-family: 'Sullivan-Fill', sans-serif;
+}
+
+#papaparse {
+    font-family: 'Arvo', sans-serif;
+}
