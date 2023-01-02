@@ -2,5 +2,17 @@
 <html lang="fr">
 {% include "./head.njk" %}
 
-{% include "./body.njk" %}
+<body>
+<div class="container flex flex-wrap items-center justify-between mx-auto">
+    {% include "./header.njk" %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include "./footer.njk" %}
+</div>
+
+{% block scripts %}
+{% endblock scripts %}
+</body>
 </html>
