@@ -7,6 +7,9 @@
   "packageManager": "yarn@3.3.0",
   "author": "Axel DAVID",
   "license": "GPL-3.0",
+  "bugs": {
+    "email": "axel.david@etu.univ-amu.fr"
+  },
   "main": "bin/www.js",
   "scripts": {
     "start": "yarn client & yarn serve",
