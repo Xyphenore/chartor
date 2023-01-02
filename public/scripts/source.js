@@ -21,29 +21,32 @@
         }
 
         const dataFileListFile = await fetch("/csv");
-        if (!dataFileListFile.ok) {
-            throw new Error(
-                "Cannot show the list of data sources."
-                + " Cannot request the list."
-                + " Please add the list to the available file.",
-            );
-        }
+        if (dataFileListFile.ok) {
+            const dataFileList = await dataFileListFile.json();
+            dataFileList.list.forEach(file => {
+                const li = document.createElement("li");
+                const span = document.createElement("span");
+                span.textContent = " - ";
 
-        const dataFileList = await dataFileListFile.json();
-        dataFileList.list.forEach(file => {
+                const link = document.createElement("a");
+                link.href = "/data/" + file;
+                link.text = file;
+                link.classList.add("underline");
+
+                li.appendChild(span);
+                li.appendChild(link);
+
+                sourceList.appendChild(li);
+            });
+        }
+        else {
             const li = document.createElement("li");
             const span = document.createElement("span");
-            span.textContent = " - ";
-
-            const link = document.createElement("a");
-            link.href = "/data/" + file;
-            link.text = file;
-            link.classList.add("underline");
+            span.textContent = "Erreur : impossible de charger la liste des fichiers sources."
+                               + " Veuillez actualiser la page et réessayer.";
 
             li.appendChild(span);
-            li.appendChild(link);
-
             sourceList.appendChild(li);
-        });
+        }
     }
 )();
