@@ -3,9 +3,12 @@
 module.exports = {
     content: [
         "./views/**/*.njk",
-        "./public/*",
+        "./public/scripts/**/*.js",
     ],
     theme: {
+        container: {
+            center: true,
+        },
         extend: {},
     },
     plugins: [],
