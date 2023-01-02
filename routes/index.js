@@ -16,7 +16,7 @@ const indexRoute = function(_ignoredReq, res, _ignoredNext) {
     res.render(
         "index.njk",
         {
-            title: "Express",
+            title: "Chartor - Accueil",
         },
     );
 };
