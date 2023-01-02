@@ -1,0 +1,32 @@
+# Linter configs
+.eslintrc.json
+.flowconfig
+.stylelintignore
+.stylelintrc.json
+
+# Git config
+.gitpod.yml
+
+# IDE config (JetBrains)
+.idea
+
+# Yarn plugins
+.yarn/plugins
+
+# CSS config (postcss)
+postcss.config.cjs
+tailwind.config.cjs
+views/tailwindcss_style
+
+# Logs directory
+logs
+log
+
+# Generated files by server
+public/csv.txt
+
+# Nodemon config (dev)
+nodemon.json
+
+# Test directory
+tests
