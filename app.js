@@ -26,6 +26,7 @@ import {fileURLToPath} from "url";
 import zlib from "zlib";
 
 import {router as indexRouter} from "./routes/index.js";
+import {router as sourceRouter} from "./routes/source.js";
 
 /**
  * The application.
@@ -193,6 +194,7 @@ app.use(express.static(PUBLIC_DIR));
 
 // Add routes
 app.use("/", indexRouter);
+app.use("/source", sourceRouter);
 
 // Catch 404 and forward to error handler
 app.use((req, _secondIgnored, next) => {
