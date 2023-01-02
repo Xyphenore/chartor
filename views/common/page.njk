@@ -2,8 +2,9 @@
 <html lang="fr">
 {% include "./head.njk" %}
 
-<body>
-<div class="container flex flex-wrap items-center justify-between mx-auto">
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+
+<div class="xl:container xl:mx-auto px-4 flex flex-col h-screen justify-between">
     {% include "./header.njk" %}
 
     {% block content %}
