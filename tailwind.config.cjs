@@ -3,6 +3,7 @@
 module.exports = {
     content: [
         "./views/**/*.njk",
+        "./public/*",
     ],
     theme: {
         extend: {},

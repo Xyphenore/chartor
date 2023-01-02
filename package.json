@@ -18,7 +18,8 @@
     "serve-hot-reload": "nodemon yarn start",
     "test": "mocha",
     "eslint": "eslint --color --ext .html,.js,.json,.md *.* src",
-    "eslint:fix": "yarn eslint -- --fix"
+    "eslint:fix": "yarn eslint -- --fix",
+    "generate_css": "yarn tailwindcss -i ./views/tailwindcss_style/style.css -o ./public/stylesheets/style.css"
   },
   "keywords": [
     "project",
