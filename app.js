@@ -228,7 +228,7 @@ if (!isDirectory(DATA_DIR)) {
     throw new Error(
         "Internal Error. The data directory is not a directory."
         + `Value: '${DATA_DIR}'.`
-        + "Please verify the object with the name of the data's directory.",
+        + "Please verify the object with the name of the data directory.",
     );
 }
 
@@ -270,7 +270,7 @@ const listCSVFiles = function(dataDir) {
         throw new Error(
             "Internal Error. The data directory is not a directory."
             + `Value: '${dataDir}'.`
-            + "Please verify the object with the name of the data's directory.",
+            + "Please verify the object with the name of the data directory.",
         );
     }
 
@@ -294,7 +294,7 @@ if (exists(NAMES_FILE)) {
 }
 listCSVFiles(DATA_DIR)
     .forEach(name => {
-        writeFile(NAMES_FILE, name, {flag: "a"});
+        writeFile(NAMES_FILE, name + "\n", {flag: "a"});
     });
 
 export {app};
