@@ -44,6 +44,8 @@
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
     "@html-eslint/parser": "^0.15.0",
+    "autoprefixer": "^10.4.13",
+    "debug": "^4.3.4",
     "eslint": "^8.31.0",
     "eslint-config-adjunct": "^4.11.2",
     "eslint-plugin-array-func": "^3.1.7",
@@ -69,12 +71,10 @@
     "mocha": "^10.2.0",
     "nodemon": "^2.0.20",
     "npm-check-updates": "^16.6.2",
+    "postcss": "^8.4.20",
     "snyk": "^1.1080.0",
     "stylelint": "^14.16.1",
     "supertest": "^6.3.3",
-    "tailwindcss": "^3.2.4",
-    "postcss": "^8.4.20",
-    "autoprefixer": "^10.4.13",
-    "debug": "^4.3.4"
+    "tailwindcss": "^3.2.4"
   }
 }

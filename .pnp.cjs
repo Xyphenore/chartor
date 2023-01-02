@@ -56,7 +56,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:0332bf22322c1c06e8366927b54c7bedc5dc52b32feb666b4047426e07460de1101fb62d4c01c6cd9fa2964d840dab751d8d11152c9fa1de60af86dcfcf1507e#npm:45.0.2"],\
             ["express", "npm:4.18.2"],\
             ["flow-bin", "npm:0.196.3"],\
-            ["flowbite", "npm:1.5.5"],\
             ["helmet", "npm:6.0.1"],\
             ["http-errors", "npm:2.0.0"],\
             ["http-graceful-shutdown", "npm:3.1.12"],\
@@ -562,15 +561,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@pnpm/npm-conf", "npm:1.0.5"],\
             ["@pnpm/network.ca-file", "npm:1.0.2"],\
             ["config-chain", "npm:1.1.13"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@popperjs/core", [\
-        ["npm:2.11.6", {\
-          "packageLocation": "./.yarn/cache/@popperjs-core-npm-2.11.6-5bcdc104bd-47fb328cec.zip/node_modules/@popperjs/core/",\
-          "packageDependencies": [\
-            ["@popperjs/core", "npm:2.11.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1466,7 +1456,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:0332bf22322c1c06e8366927b54c7bedc5dc52b32feb666b4047426e07460de1101fb62d4c01c6cd9fa2964d840dab751d8d11152c9fa1de60af86dcfcf1507e#npm:45.0.2"],\
             ["express", "npm:4.18.2"],\
             ["flow-bin", "npm:0.196.3"],\
-            ["flowbite", "npm:1.5.5"],\
             ["helmet", "npm:6.0.1"],\
             ["http-errors", "npm:2.0.0"],\
             ["http-graceful-shutdown", "npm:3.1.12"],\
@@ -3263,17 +3252,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["flowbite", [\
-        ["npm:1.5.5", {\
-          "packageLocation": "./.yarn/cache/flowbite-npm-1.5.5-ef609833d4-4f6f377613.zip/node_modules/flowbite/",\
-          "packageDependencies": [\
-            ["flowbite", "npm:1.5.5"],\
-            ["@popperjs/core", "npm:2.11.6"],\
-            ["mini-svg-data-uri", "npm:1.4.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["form-data", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/form-data-npm-4.0.0-916facec2d-01135bf867.zip/node_modules/form-data/",\
@@ -5055,15 +5033,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/min-indent-npm-1.0.1-77031f50e1-bfc6dd03c5.zip/node_modules/min-indent/",\
           "packageDependencies": [\
             ["min-indent", "npm:1.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["mini-svg-data-uri", [\
-        ["npm:1.4.4", {\
-          "packageLocation": "./.yarn/cache/mini-svg-data-uri-npm-1.4.4-929f6f1119-997f1fbd8d.zip/node_modules/mini-svg-data-uri/",\
-          "packageDependencies": [\
-            ["mini-svg-data-uri", "npm:1.4.4"]\
           ],\
           "linkType": "HARD"\
         }]\

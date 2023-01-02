@@ -423,13 +423,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.9.3":
-  version: 2.11.6
-  resolution: "@popperjs/core@npm:2.11.6"
-  checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
-  languageName: node
-  linkType: hard
-
 "@sindresorhus/is@npm:^5.2.0":
   version: 5.3.0
   resolution: "@sindresorhus/is@npm:5.3.0"
@@ -1196,7 +1189,6 @@ __metadata:
     eslint-plugin-unicorn: ^45.0.2
     express: ^4.18.2
     flow-bin: ^0.196.3
-    flowbite: ^1.5.5
     helmet: ^6.0.1
     http-errors: ^2.0.0
     http-graceful-shutdown: ^3.1.12
@@ -2586,16 +2578,6 @@ __metadata:
   bin:
     flow: cli.js
   checksum: 7c3022ffd56d1c4984d94748deb9bf43a2c15189df65982f3768e41dfebc83aa67769c928cfaa3b798c8bd0de7b4939fb5d8d58bd8c4b42a6f816beb6be0a62d
-  languageName: node
-  linkType: hard
-
-"flowbite@npm:^1.5.5":
-  version: 1.5.5
-  resolution: "flowbite@npm:1.5.5"
-  dependencies:
-    "@popperjs/core": ^2.9.3
-    mini-svg-data-uri: ^1.4.3
-  checksum: 4f6f377613a5eb876def0ea754948872272130f94be69b43cb73732d6895aee79ae2e74c42735e7a0ee570395f35151215cf818bacfa020496bc24f4018c4371
   languageName: node
   linkType: hard
 
@@ -4174,15 +4156,6 @@ __metadata:
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
   checksum: bfc6dd03c5eaf623a4963ebd94d087f6f4bbbfd8c41329a7f09706b0cb66969c4ddd336abeb587bc44bc6f08e13bf90f0b374f9d71f9f01e04adc2cd6f083ef1
-  languageName: node
-  linkType: hard
-
-"mini-svg-data-uri@npm:^1.4.3":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
   languageName: node
   linkType: hard
 
