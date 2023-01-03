@@ -1,4 +1,5 @@
 import {Chart} from "../dist/chart.js";
+
 /**
  * Fetch data for the specified file.
  *
@@ -37,7 +38,7 @@ const fetchData = async function(file) {
                         results[year].data.push(result);
                     },
                     complete: (_results, filename) => {
-                        const year = filename.replace(/^\D+/g, '')
+                        const year = filename.replace(/^\D+/g, "")
                             .substring(0, 4);
                         results[year].time = Date.now() - results[year].time;
 
@@ -53,7 +54,49 @@ const fetchData = async function(file) {
     );
 };
 
-const fetchPostalCode = async function() {
+/**
+ * Remove all accent from string
+ *
+ * @returns {!string}
+ *
+ * @see http://www.finalclap.com/faq/257-javascript-supprimer-remplacer-accent
+ * @author finalclap
+ * @since 1.0.0
+ */
+const removeAccent = function(city) {
+    const accent = [
+        /[\300-\306]/g, /[\340-\346]/g, // A, a
+        /[\310-\313]/g, /[\350-\353]/g, // E, e
+        /[\314-\317]/g, /[\354-\357]/g, // I, i
+        /[\322-\330]/g, /[\362-\370]/g, // O, o
+        /[\331-\334]/g, /[\371-\374]/g, // U, u
+        /[\321]/g, /[\361]/g, // N, n
+        /[\307]/g, /[\347]/g, // C, c
+    ];
+    const noaccent = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "N", "n", "C", "c"];
+
+    let str = city;
+    for (let i = 0; i < accent.length; i++) {
+        str = str.replace(accent[i], noaccent[i]);
+    }
+
+    return str;
+};
+
+/**
+ * Fetch psotal code.
+ *
+ * @param {!string} citySearched
+ *
+ * @returns {!Promise<object>} Returns the postalCode.
+ *
+ * @since 1.0.0
+ * @author Axel DAVID
+ */
+const fetchPostalCode = async function(citySearched) {
+    let goodCity = removeAccent(citySearched.replaceAll("-", " ")
+        .replaceAll("'", " "));
+
     return new Promise((resolve, reject) => {
             const results = {};
 
@@ -65,22 +108,25 @@ const fetchPostalCode = async function() {
                     header: true,
                     delimitersToGuess: true,
                     worker: false,
-                    step: (result, _parser) => {
-                        const year = result.data.year;
-                        if (!results.hasOwnProperty(year)) {
-                            results[year] = {
-                                data: [],
-                                time: Date.now(),
-                            };
+                    fastMode: true,
+                    step: (result, parser) => {
+                        if ((
+                                result.data.nom_de_la_commune.toUpperCase() === goodCity.toUpperCase()
+                            )
+                            || (
+                                result.data.nom_de_la_commune.toUpperCase()
+                                    .includes(goodCity.toUpperCase())
+                            )
+                            || (
+                                goodCity.toUpperCase()
+                                    .includes(result.data.nom_de_la_commune.toUpperCase())
+                            )) {
+                            // parser.abort();
+                            resolve(result.data.code_postal);
                         }
-                        results[year].data.push(result);
                     },
-                    complete: (_results, filename) => {
-                        const year = filename.replace(/^\D+/g, '')
-                            .substring(0, 4);
-                        results[year].time = Date.now() - results[year].time;
-
-                        resolve(results);
+                    complete: (_results, _filename) => {
+                        reject(new Error("Don't find the postal code for the city '" + citySearched + "'."));
                     },
                     error: (error, _file) => {
                         reject(error);
@@ -90,7 +136,7 @@ const fetchPostalCode = async function() {
             );
         },
     );
-}
+};
 
 /**
  * Request data from files stored in the list.
@@ -107,9 +153,9 @@ const fetchPostalCode = async function() {
 const fetchDataList = async function(list) {
     if (null === list) {
         throw new TypeError(
-            'Cannot fetch data from the data directory.'
-            + ' The list is null.'
-            + ' Please give a list not null.',
+            "Cannot fetch data from the data directory."
+            + " The list is null."
+            + " Please give a list not null.",
         );
     }
 
@@ -151,9 +197,9 @@ const fetchDataList = async function(list) {
 const cleanData = function(data) {
     if (null === data) {
         throw new TypeError(
-            'Cannot clean data.'
-            + ' The data is null.'
-            + ' Please give a data not null.',
+            "Cannot clean data."
+            + " The data is null."
+            + " Please give a data not null.",
         );
     }
 
@@ -176,33 +222,34 @@ const cleanData = function(data) {
             results.time_spends.timeLoadEachEntry[key] = value.time_spend;
 
             for (const entry of value.data) {
-                if (entry.data.tags.toLowerCase().includes("musee de france")) {
-                    entry.errors = undefined;
-                    entry.meta = undefined;
-                    entry.data.fax = undefined;
-                    entry.data.phone = undefined;
-                    entry.data.number = undefined;
-                    entry.data.website = undefined;
-                    entry.data.description = undefined;
-                    entry.data.osm_id = undefined;
-                    entry.data.lat = undefined;
-                    entry.data.lon = undefined;
-                    entry.data.tags = undefined;
+                entry.errors = undefined;
+                entry.meta = undefined;
+                entry.data.fax = undefined;
+                entry.data.phone = undefined;
+                entry.data.number = undefined;
+                entry.data.website = undefined;
+                entry.data.description = undefined;
+                entry.data.osm_id = undefined;
+                entry.data.lat = undefined;
+                entry.data.lon = undefined;
 
-                    const stats = {
-                        payant: null,
-                        gratuit: null,
-                    };
-
-                    for (const split of entry.data.stats.split(";")) {
-                        if (split.startsWith("payant") || split.startsWith("gratuit")) {
-                            const slices = split.split(":");
-                            stats[slices[0]] = slices[1];
-                        }
-                    }
-
-                    entry.data.stats = stats;
+                const stats = {
+                    payant: 0,
+                    gratuit: 0,
+                };
+                
+                if (entry.data.stats.startsWith("payant")) {
+                    const slices = entry.data.stats.split(":");
+                    stats[slices[0]] = parseInt(slices[1]);
                 }
+                if (entry.data.tags.startsWith("gratuit")) {
+                    const slices = entry.data.tags.split(":");
+                    stats[slices[0]] = parseInt(slices[1]);
+                }
+
+                entry.data.tags = undefined;
+
+                entry.data.stats = stats;
             }
 
             results.data[key] = value.data;
@@ -227,9 +274,9 @@ const cleanData = function(data) {
 const aggregateDataByID = function(data) {
     if (null === data) {
         throw new TypeError(
-            'Cannot aggregate data by ID.'
-            +' The data is null.'
-            +' Please give a data not null.',
+            "Cannot aggregate data by ID."
+            + " The data is null."
+            + " Please give a data not null.",
         );
     }
 
@@ -254,7 +301,7 @@ const aggregateDataByID = function(data) {
                 postal_code: entry.data.postal_code,
                 street: entry.data.street,
                 year: entry.data.year,
-                state: entry.data.state,
+                stats: entry.data.stats,
                 status: entry.data.status,
             };
         }
@@ -265,23 +312,58 @@ const aggregateDataByID = function(data) {
     return results;
 };
 
-
-const postalCode = function() {
-
-}
-const aggregateDataByDepartment = function(data, postalCode) {
-    if (null === data) {
+/**
+ * Get the french postal code for the given city.
+ *
+ * @throws {TypeError} Thrown if the city is null.
+ * @throws {TypeError} Thrown if the city is not a string.
+ *
+ * @returns {!object} Returns an object with aggregate data, and the time_spend.
+ *
+ * @since 1.0.0
+ * @author Axel DAVID
+ * @see cleanData
+ * @see postalCode
+ */
+const postalCode = async function(city) {
+    if (null === city) {
         throw new TypeError(
-            'Cannot aggregate data by ID.'
-            +' The data is null.'
-            +' Please give a data not null.',
+            "Cannot get the postal code for the city."
+            + " The city is null."
+            + " Please give a city not null.",
         );
     }
-    if (null === postalCode) {
+
+    if ("string" !== typeof city) {
         throw new TypeError(
-            'Cannot aggregate data by ID.'
-            +' The postal code is null.'
-            +' Please give a postal code not null.',
+            "Cannot get the postal code for the city."
+            + " The city is not a string."
+            + ` Type: '${typeof city}'.`
+            + " Please give a city like a string.",
+        );
+    }
+
+    return fetchPostalCode(city);
+};
+
+/**
+ * Aggregate all data by department.
+ *
+ * @throws {TypeError} Thrown if the data is null.
+ *
+ * @returns {!object} Returns an object with aggregate data, and the time_spend.
+ *
+ * @since 1.0.0
+ * @author Axel DAVID
+ * @see cleanData
+ * @see postalCode
+ */
+const aggregateDataByDepartment = async function(data) {
+    if (null === data) {
+        throw new TypeError(
+            "Cannot aggregate data by ID."
+            + " The data is null."
+            + " Please give a data not null.",
         );
     }
 
@@ -297,7 +379,8 @@ const aggregateDataByDepartment = function(data, postalCode) {
             if ("fr" === entry.data.country_code) {
                 dep = entry.data.postal_code.substring(0, 2);
                 if ("" === dep) {
-                    console.error(entry.data.id);
+                    const cp = await postalCode(entry.data.city);
+                    dep = cp.substring(0, 2);
                 }
             }
 
@@ -311,8 +394,13 @@ const aggregateDataByDepartment = function(data, postalCode) {
                 };
             }
 
-            results.data[dep][key].payant += entry.data.stats.payant;
-            results.data[dep][key].gratuit += entry.data.stats.gratuit;
+            if (!Number.isNaN(entry.data.stats.payant)) {
+                results.data[dep][key].payant += entry.data.stats.payant;
+            }
+            
+            if (!Number.isNaN(entry.data.stats.gratuit)) {
+                results.data[dep][key].gratuit += entry.data.stats.gratuit;
+            }
         }
     }
     results.time_spend = Date.now() - startTime;
@@ -320,12 +408,23 @@ const aggregateDataByDepartment = function(data, postalCode) {
     return results;
 };
 
+/**
+ * Aggregate all data by city.
+ *
+ * @throws {TypeError} Thrown if the data is null.
+ *
+ * @returns {!object} Returns an object with aggregate data, and the time_spend.
+ *
+ * @since 1.0.0
+ * @author Axel DAVID
+ * @see cleanData
+ */
 const aggregateDataByCity = function(data) {
     if (null === data) {
         throw new TypeError(
-            'Cannot aggregate data by City.'
-            +' The data is null.'
-            +' Please give a data not null.',
+            "Cannot aggregate data by City."
+            + " The data is null."
+            + " Please give a data not null.",
         );
     }
 
@@ -338,19 +437,25 @@ const aggregateDataByCity = function(data) {
     for (const [key, value] of Object.entries(data.data)) {
         for (const entry of value) {
             const city = entry.data.city.toUpperCase();
+            if ("" !== city) {
+                if (!results.data.hasOwnProperty(city)) {
+                    results.data[city] = {};
+                }
+                if (!results.data[city].hasOwnProperty(key)) {
+                    results.data[city][key] = {
+                        payant: 0,
+                        gratuit: 0,
+                    };
+                }
 
-            if (!results.data.hasOwnProperty(city)) {
-                results.data[city] = {};
+            if (!Number.isNaN(entry.data.stats.payant)) {
+                results.data[city][key].payant += entry.data.stats.payant;
             }
-            if (!results.data[city].hasOwnProperty(key)) {
-                results.data[city][key] = {
-                    payant: 0,
-                    gratuit: 0,
-                };
+            
+            if (!Number.isNaN(entry.data.stats.gratuit)) {
+                results.data[city][key].gratuit += entry.data.stats.gratuit;
             }
-
-            results.data[city][key].payant += entry.data.stats.payant;
-            results.data[city][key].gratuit += entry.data.stats.gratuit;
+            }
         }
     }
     results.time_spend = Date.now() - startTime;
@@ -358,12 +463,25 @@ const aggregateDataByCity = function(data) {
     return results;
 };
 
+/**
+ * Aggregate all data by museum.
+ *
+ * @throws {TypeError} Thrown if the data is null.
+ * @throws {TypeError} Thrown if the postalCode is null.
+ *
+ * @returns {!object} Returns an object with aggregate data, and the time_spend.
+ *
+ * @since 1.0.0
+ * @author Axel DAVID
+ * @see cleanData
+ * @see postalCode
+ */
 const aggregateDataByMuseum = function(data) {
     if (null === data) {
         throw new TypeError(
-            'Cannot aggregate data by Museum.'
-            +' The data is null.'
-            +' Please give a data not null.',
+            "Cannot aggregate data by Museum."
+            + " The data is null."
+            + " Please give a data not null.",
         );
     }
 
@@ -387,8 +505,13 @@ const aggregateDataByMuseum = function(data) {
                 };
             }
 
-            results.data[museum][key].payant += entry.data.stats.payant;
-            results.data[museum][key].gratuit += entry.data.stats.gratuit;
+            if (!Number.isNaN(entry.data.stats.payant)) {
+                results.data[museum][key].payant += entry.data.stats.payant;
+            }
+    
+            if (!Number.isNaN(entry.data.stats.gratuit)) {
+                results.data[museum][key].gratuit += entry.data.stats.gratuit;
+            }
         }
     }
     results.time_spend = Date.now() - startTime;
@@ -442,49 +565,63 @@ const aggregateDataByMuseum = function(data) {
         const dataFileListFile = await fetch("/csv");
         if (dataFileListFile.ok) {
             const dataFileList = await dataFileListFile.json();
-            const poste = await fetchPostalCode();
-            console.log(poste);
             const cleanResults = cleanData(await fetchDataList(new Set(dataFileList.list
-                .filter(element => !element.includes("laposte")))
+                .filter(element => !element.includes("laposte"))),
             ));
 
             const timeSpend = cleanResults.time_spends;
             cleanResults.time_spends = undefined;
+            console.log(cleanResults);
 
             const dataByID = aggregateDataByID(cleanResults);
-            const dataByDep = aggregateDataByDepartment(cleanResults);
+            timeSpend["timeAggregateByID"] = dataByID.time_spend;
+            console.log(dataByID);
+
             const dataByCity = aggregateDataByCity(cleanResults);
+            timeSpend["timeAggregateByCity"] = dataByCity.time_spend;
+            console.log(dataByCity);
+
             const dataByMuseum = aggregateDataByMuseum(cleanResults);
+            timeSpend["timeAggregateByMuseum"] = dataByMuseum.time_spend;
+            console.log(dataByMuseum);
+
             console.log("Time load: " + timeSpend.timeLoad + " ms.");
             console.log("Time merge: " + timeSpend.timeMerge + " ms.");
             console.log("Time cleanup: " + timeSpend.timeCleanup + " ms.");
+            console.log("Time for aggregate by ID: " + timeSpend.timeAggregateByID + " ms.");
+            console.log("Time for aggregate by city: " + timeSpend.timeAggregateByCity + " ms.");
+            console.log("Time for aggregate by museum: " + timeSpend.timeAggregateByMuseum + " ms.");
 
-            console.log(cleanResults);
-            console.log(dataByID);
-            console.log(dataByDep);
-            console.log(dataByCity);
-            console.log(dataByMuseum);
+            // const dataByDep = await aggregateDataByDepartment(cleanResults);
+            // timeSpend["timeAggregateByDep"] = dataByDep.time_spend;
+            // console.log(dataByDep);
+            // console.log("Time for aggregate by department: " + timeSpend.timeAggregateByDep + " ms.");
+
+            cleanResults.data = undefined;
+
 
             const canvas = document.createElement("canvas");
-            // new Chart(canvas, {
-            //     datasets: [
-            //         {
-            //             data: results["2001"].data,
-            //         },
-            //     ],
-            //     options: {
-            //         scales: {
-            //             y: {
-            //                 beginAtZero: true
-            //             },
-            //         },
-            //         plugins: {
-            //             colors: {
-            //                 forceOverride: true,
-            //             },
-            //         },
-            //     },
-            // });
+            new Chart(canvas, {
+                labels: dataByMuseum.data,
+                type: "line",
+                datasets: [
+                    {
+                        data: dataByMuseum.data,
+                    },
+                ],
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        },
+                    },
+                    plugins: {
+                        colors: {
+                            forceOverride: true,
+                        },
+                    },
+                },
+            });
 
             chart1.appendChild(canvas);
         }
