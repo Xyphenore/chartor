@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@html-eslint/eslint-plugin", "npm:0.15.0"],\
             ["@html-eslint/parser", "npm:0.15.0"],\
             ["autoprefixer", "virtual:0332bf22322c1c06e8366927b54c7bedc5dc52b32feb666b4047426e07460de1101fb62d4c01c6cd9fa2964d840dab751d8d11152c9fa1de60af86dcfcf1507e#npm:10.4.13"],\
+            ["chart.js", "npm:4.1.1"],\
             ["compression", "npm:1.7.4"],\
             ["debug", "virtual:9e3a462140b35a19ddb3d48ebde58d66740d97f4c0386bc195c327fc2c44fa59f43cbcb382dd9f194b16d0dd6c0a138aadd4a9de84088f88e25946598f97cb88#npm:4.3.4"],\
             ["eslint", "npm:8.31.0"],\
@@ -417,6 +418,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jridgewell/trace-mapping", "npm:0.3.17"],\
             ["@jridgewell/resolve-uri", "npm:3.1.0"],\
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@kurkle/color", [\
+        ["npm:0.3.1", {\
+          "packageLocation": "./.yarn/cache/@kurkle-color-npm-0.3.1-174f3d038c-e6be5c081b.zip/node_modules/@kurkle/color/",\
+          "packageDependencies": [\
+            ["@kurkle/color", "npm:0.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1423,6 +1433,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["chart.js", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/chart.js-npm-4.1.1-4027272d4d-e195abc7b1.zip/node_modules/chart.js/",\
+          "packageDependencies": [\
+            ["chart.js", "npm:4.1.1"],\
+            ["@kurkle/color", "npm:0.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["chartor", [\
         ["workspace:.", {\
           "packageLocation": "./",\
@@ -1431,6 +1451,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@html-eslint/eslint-plugin", "npm:0.15.0"],\
             ["@html-eslint/parser", "npm:0.15.0"],\
             ["autoprefixer", "virtual:0332bf22322c1c06e8366927b54c7bedc5dc52b32feb666b4047426e07460de1101fb62d4c01c6cd9fa2964d840dab751d8d11152c9fa1de60af86dcfcf1507e#npm:10.4.13"],\
+            ["chart.js", "npm:4.1.1"],\
             ["compression", "npm:1.7.4"],\
             ["debug", "virtual:9e3a462140b35a19ddb3d48ebde58d66740d97f4c0386bc195c327fc2c44fa59f43cbcb382dd9f194b16d0dd6c0a138aadd4a9de84088f88e25946598f97cb88#npm:4.3.4"],\
             ["eslint", "npm:8.31.0"],\
