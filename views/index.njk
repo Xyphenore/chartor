@@ -1,9 +1,19 @@
 {% extends "./common/page.njk" %}
 
 {% block content %}
+    <div id="information"></div>
+
+    <div id="error"></div>
+
+    <div id="chart-1"></div>
+
+    <div id="chart-2"></div>
+
+    <div id="chart-3"></div>
 {% endblock content %}
 
 {% block scripts %}
     {{ super() }}
-    <script async src="/scripts/index.js" type="module"></script>
+    <script src="/scripts/papaparse.min.js"></script>
+    <script src="/scripts/index.js" type="module"></script>
 {% endblock scripts %}
